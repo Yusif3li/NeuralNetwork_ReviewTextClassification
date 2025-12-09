@@ -1,33 +1,63 @@
-# Review Classification using Deep Learning (CNN & LSTM)
 
-This project implements a complete Deep Learning pipeline to classify text reviews into five distinct sentiment categories (*Bad, Very Bad, Good, Very Good, Excellent*).
+# Review Classification with Deep Learning
 
-It tackles the challenge of a **small, imbalanced dataset** (~2,500 original samples) through rigorous data engineering, utilizing **Spell Checking**, **Back-Translation**, and **Synonym Augmentation** to synthetically expand the dataset to over 12,000 balanced samples.
+A comprehensive deep learning project for sentiment classification using CNN and Bi-LSTM with GloVe embeddings.
 
-## 🚀 Key Features
+## 🛠️ Installation
 
-* **Multi-Model Architecture:** Implements a 3-Branch 1D-CNN and a Bidirectional LSTM.
-* **Advanced Preprocessing:**
-    * **Spell Correction:** Uses `pyspellchecker` to fix typos before tokenization.
-    * **Back-Translation:** Generates new training samples by translating English $\to$ French $\to$ English.
-    * **NLTK Augmentation:** Balances classes using synonym replacement.
-* **Transfer Learning:** Utilizes Pre-trained **GloVe 100d** embeddings.
-* **Ensembling:** Combines CNN and LSTM predictions via soft voting for improved robustness.
-* **Anti-Leakage Pipeline:** Ensures data augmentation occurs *after* the train/validation split to guarantee honest evaluation scores.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/review-classification-dl.git
+    cd review-classification-dl
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    pip install tensorflow pandas numpy scikit-learn nltk pyspellchecker deep-translator tqdm
+    ```
+
+3. **Download GloVe embeddings:**
+    - Download [GloVe 6B (822MB)](https://nlp.stanford.edu/projects/glove/) from Stanford NLP
+    - Extract the zip file
+    - Place `glove.6B.100d.txt` into the `Dataset/` folder
+    - Verify: `Dataset/glove.6B.100d.txt`
+
+## ⚡ Quick Start
+
+The project runs in 3 sequential steps:
+
+### Step 1: Preprocessing (5-10 min)
+```bash
+python OneTimeSetup.py
+```
+Cleans text, fixes emojis, and corrects typos. Outputs: `Dataset/train_fixed.csv`, `Dataset/test_fixed.csv`
+
+### Step 2: Data Generation (20-40 min)
+```bash
+python BackTranslator.py
+```
+Generates synthetic data via back-translation. Outputs: `Dataset/train_back_translated.csv`
+
+### Step 3: Training & Ensembling
+```bash
+python NN_Project.py
+```
+Trains CNN and Bi-LSTM models, ensembles predictions, and generates submission.
 
 ## 📂 Project Structure
 
-```text
+```
 ├── Dataset/
-│   ├── train.csv                # Original Training Data
-│   ├── test.csv                 # Original Test Data
-│   ├── glove.6B.100d.txt        # Pre-trained Embeddings (Download required)
-│   └── ... (Generated csv files appear here)
-├── SavedModels/                 # Trained .keras models saved here
-├── ModelPredicts/               # Submission CSVs saved here
-├── NN_Project.py                # MAIN SCRIPT: Trains models & generates submissions
-├── Preprocessing.py             # Utility: Cleaning & Augmentation logic
-├── OneTimeSetup.py              # Utility: Runs Spell Checker (Step 1)
-├── BackTranslator.py            # Utility: Generates new data (Step 2)
-├── DataDiagnostics.py           # Utility: Analyzes class balance & length
-└── requirements.txt             # Python dependencies
+│   ├── train.csv
+│   ├── test.csv
+│   └── glove.6B.100d.txt (download required)
+├── SavedModels/
+├── ModelPredicts/
+├── NN_Project.py
+├── Preprocessing.py
+├── OneTimeSetup.py
+├── BackTranslator.py
+├── DataDiagnostics.py
+└── requirements.txt
+```
+
