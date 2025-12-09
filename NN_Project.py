@@ -117,7 +117,7 @@ def build_lstm_model(vocab_size, num_classes, input_length, embedding_matrix=Non
     x = SpatialDropout1D(0.3)(embedding)
     
     # Bidirectional LSTM
-    x = Bidirectional(LSTM(64, return_sequences=False, dropout=0.3, recurrent_dropout=0.0))(x)
+    x = Bidirectional(LSTM(32, return_sequences=False, dropout=0.4, recurrent_dropout=0.0))(x)
     
     x = BatchNormalization()(x)
     x = Dense(64, kernel_regularizer=l2(0.001))(x)
