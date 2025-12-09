@@ -1,1 +1,15 @@
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Datasets & Large Files
 Dataset/glove.6B.100d.txt
+
+# Virtual Environments
+venv/
+.env
+
+# IDE settings
+.vscode/
+.idea/
