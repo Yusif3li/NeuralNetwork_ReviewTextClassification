@@ -15,16 +15,17 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l2
 import tensorflow.keras.backend as K
 
+# IMPORTS 
+from Preprocessing import augment_dataset
+import DataDiagnostics
 import OneTimeSetup
 import BackTranslator
-import DataDiagnostics
-import Preprocessing
 
 # PATHS 
 TRAIN_FIXED = 'Dataset/train_fixed.csv'
 TEST_FIXED = 'Dataset/test_fixed.csv'
 BACK_TRANS_PATH = 'Dataset/train_back_translated.csv'
-GLOVE_PATH = 'Dataset/glove.6B.100d.txt'
+GLOVE_PATH = 'Dataset/glove.6b/glove.6B.100d.txt'
 AUG_FILE = 'new_dataset/train_aug_nltk.csv'
 
 # SETUP
@@ -36,13 +37,30 @@ os.makedirs('new_dataset', exist_ok=True)
 MAX_WORDS = 22000       
 MAX_LEN = 300           
 EMBEDDING_DIM = 100     
-BATCH_SIZE = 32        
-EPOCHS = 50            
+BATCH_SIZE = 16         
+EPOCHS = 40             
 TEST_SIZE = 0.2         
 
+def check_and_prepare_data():
+    # 1. Check Spell Checking
+    if not os.path.exists(TRAIN_FIXED) or not os.path.exists(TEST_FIXED):
+        print("\nCleaned data not found. Running OneTimeSetup...")
+        OneTimeSetup.run_cleanup()
+    else:
+        print("Cleaned data found.")
+
+    # 2. Check Back Translation
+    if not os.path.exists(BACK_TRANS_PATH):
+        print("\nBack-Translated data not found. Running BackTranslator...")
+        print("(This will take time, but only runs once!)")
+        BackTranslator.run_back_translation()
+    else:
+        print("Back-Translated data found.")
+
 def load_glove_embeddings(vocab_size, word_index):
-    print(f">>> Loading GloVe Embeddings from {GLOVE_PATH}...")
+    print(f"Loading GloVe Embeddings from {GLOVE_PATH}...")
     if not os.path.exists(GLOVE_PATH):
+        print(f"WARNING: GloVe file not found at {GLOVE_PATH}!")
         return None
 
     embeddings_index = {}
@@ -53,7 +71,9 @@ def load_glove_embeddings(vocab_size, word_index):
                 word = values[0]
                 coefs = np.asarray(values[1:], dtype='float32')
                 embeddings_index[word] = coefs
-    except: return None
+    except Exception as e:
+        print(f"Error reading GloVe file: {e}")
+        return None
 
     embedding_matrix = np.zeros((vocab_size, EMBEDDING_DIM))
     hits = 0
@@ -69,14 +89,15 @@ def load_glove_embeddings(vocab_size, word_index):
     print(f"Loaded {hits} words. ({misses} words missing)")
     return embedding_matrix
 
-#  CNN MODEL 
+# CNN MODEL
 def build_cnn_model(vocab_size, num_classes, input_length, embedding_matrix=None):
     inputs = Input(shape=(input_length,))
+    
     if embedding_matrix is not None:
         embedding = Embedding(input_dim=vocab_size, output_dim=EMBEDDING_DIM, weights=[embedding_matrix], trainable=False)(inputs)
     else:
         embedding = Embedding(input_dim=vocab_size, output_dim=EMBEDDING_DIM)(inputs)
-    
+        
     x = SpatialDropout1D(0.2)(embedding)
     
     c1 = Conv1D(filters=32, kernel_size=3, padding='same', kernel_regularizer=l2(0.001))(x)
@@ -95,17 +116,19 @@ def build_cnn_model(vocab_size, num_classes, input_length, embedding_matrix=None
     p3 = GlobalAveragePooling1D()(c3)
     
     merged = Concatenate()([p1, p2, p3])
+    
     dense = Dense(64, kernel_regularizer=l2(0.001))(merged)
     dense = BatchNormalization()(dense)
     dense = Activation('relu')(dense)
     dropout = Dropout(0.3)(dense)
+    
     outputs = Dense(num_classes, activation='softmax')(dropout)
     
     model = Model(inputs=inputs, outputs=outputs)
     model.compile(optimizer=Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     return model
 
-# LSTM MODEL 
+# LSTM MODEL
 def build_lstm_model(vocab_size, num_classes, input_length, embedding_matrix=None):
     inputs = Input(shape=(input_length,))
     
@@ -116,7 +139,7 @@ def build_lstm_model(vocab_size, num_classes, input_length, embedding_matrix=Non
         
     x = SpatialDropout1D(0.3)(embedding)
     
-    # Bidirectional LSTM
+    # Bidirectional LSTM with 32 units
     x = Bidirectional(LSTM(32, return_sequences=False, dropout=0.4, recurrent_dropout=0.0))(x)
     
     x = BatchNormalization()(x)
@@ -131,57 +154,94 @@ def build_lstm_model(vocab_size, num_classes, input_length, embedding_matrix=Non
     return model
 
 if __name__ == "__main__":
+    # PIPELINE CHECK
+    check_and_prepare_data()
+
     print("\n" + "="*50)
-    print(">>> PIPELINE: TRAINING & ENSEMBLING")
+    print("PIPELINE STEP 3: PREPARING DATA FOR MODELS")
     print("="*50)
     
-    #  LOAD DATA
-    print(">>> Loading Data...")
+    # 1. Load Data
+    print("Loading Data...")
     df_full = pd.read_csv(TRAIN_FIXED)
+
+    print("\nRunning Diagnostics on Final Training Set...")
+    try:
+        suggested_len = DataDiagnostics.analyze_data(df_full, text_col='clean_text', label_col='review')
+        MAX_LEN = suggested_len
+        print(f"Updated MAX_LEN to {MAX_LEN} (Based on Augmented Data)")
+    except Exception as e:
+        print(f"Diagnostics failed: {e}")
+        pass
+
     df_full['clean_text'] = df_full['clean_text'].fillna("").astype(str)
     
-    #  MERGE BACK-TRANSLATED (Using Split ID Logic)
-    print(">>> Splitting IDs...")
+    # 2. Merge Back-Translated Data
+    df_back = pd.read_csv(BACK_TRANS_PATH)
+    
+    # 3. Split IDs first to ensure NO LEAKAGE
+    print("Splitting Train/Validation...")
     le = LabelEncoder()
     df_full['label_id'] = le.fit_transform(df_full['review'])
     classes = le.classes_
     
-    indices_train, indices_val = train_test_split(df_full.index, test_size=TEST_SIZE, random_state=42, stratify=df_full['label_id'])
+    indices_train, indices_val = train_test_split(
+        df_full.index, 
+        test_size=TEST_SIZE, 
+        random_state=42, 
+        stratify=df_full['label_id']
+    )
     
     X_train_raw = df_full.loc[indices_train, 'clean_text']
     y_train_raw = df_full.loc[indices_train, 'review']
     X_val_raw = df_full.loc[indices_val, 'clean_text']
-    y_val_raw = df_full.loc[indices_val, 'review'] # Numeric or String? Review is string. 
-    # We need the numeric Y for validation
-    y_val_numeric = df_full.loc[indices_val, 'label_id'].values
+    
+    # We need numeric Y for validation scoring
+    y_val_numeric = df_full.loc[indices_val, 'label_id'].values 
 
-    if os.path.exists(BACK_TRANS_PATH):
-        print(">>> Merging Back-Translation...")
-        df_back = pd.read_csv(BACK_TRANS_PATH)
+    # Merge Back-Translation (Anti-Leakage)
+    if not df_back.empty:
         train_ids = df_full.loc[indices_train, 'id'].values
         df_back_safe = df_back[df_back['id'].isin(train_ids)].copy()
+        
         if not df_back_safe.empty:
+            print(f"Merging {len(df_back_safe)} Back-Translated samples into Training Set")
             df_back_safe['text'] = df_back_safe['text'].astype(str)
             X_train_raw = pd.concat([X_train_raw, df_back_safe['text']])
             y_train_raw = pd.concat([y_train_raw, df_back_safe['review']])
 
-    #  AUGMENTATION
+    # 4. Augmentation
     if os.path.exists(AUG_FILE):
-        print(f">>> Loading Augmented Data: {AUG_FILE}")
+        print(f"Found Pre-Augmented Data: {AUG_FILE}")
+        print("Loading directly (Skipping slow augmentation)...")
         df_train_aug = pd.read_csv(AUG_FILE)
         df_train_aug['clean_text'] = df_train_aug['clean_text'].fillna("").astype(str)
     else:
-        print(">>> Generating Augmented Data...")
+        print("Generating Augmented Data...")
         df_train_split = pd.DataFrame({'clean_text': X_train_raw, 'review': y_train_raw})
-        df_train_aug = Preprocessing.augment_dataset(df_train_split, strategy='nltk')
+        df_train_aug = augment_dataset(df_train_split, strategy='nltk')
+        print(f"Saving Augmented Data to {AUG_FILE}...")
         df_train_aug.to_csv(AUG_FILE, index=False)
 
-    #  TOKENIZATION
-    print(">>> Tokenizing...")
+    # 5. DIAGNOSTICS ON FINAL DATA
+    # We run this on the augmented data to find the TRUE max length needed
+    print("\nRunning Diagnostics on Final Training Set...")
+    try:
+        suggested_len = DataDiagnostics.analyze_data(df_train_aug, text_col='clean_text', label_col='review')
+        MAX_LEN = suggested_len
+        print(f"Updated MAX_LEN to {MAX_LEN} (Based on Augmented Data)")
+    except Exception as e:
+        print(f"Diagnostics failed: {e}")
+        pass
+
+    # 6. Tokenization
+    print("Tokenizing...")
     tokenizer = Tokenizer(num_words=MAX_WORDS, oov_token="<OOV>")
     tokenizer.fit_on_texts(df_train_aug['clean_text'])
+    
     embedding_matrix = load_glove_embeddings(len(tokenizer.word_index) + 1, tokenizer.word_index)
     
+    # Convert Text to Sequences
     X_train_seq = tokenizer.texts_to_sequences(df_train_aug['clean_text'])
     X_val_seq = tokenizer.texts_to_sequences(X_val_raw)
     
@@ -193,7 +253,7 @@ if __name__ == "__main__":
     class_weights = class_weight.compute_class_weight(class_weight='balanced', classes=np.unique(y_train_final), y=y_train_final)
     weights_dict = dict(enumerate(class_weights))
 
-    #  EXPERIMENTS 
+    # --- EXPERIMENTS ---
     experiments = [
         { 
             "type": "CNN",
@@ -209,8 +269,8 @@ if __name__ == "__main__":
         }
     ]
     
-    model_predictions_val = [] # For offline ensemble accuracy
-    model_predictions_test = [] # For submission
+    model_predictions_val = [] 
+    model_predictions_test = [] 
     
     # Load Test Data for prediction
     df_test = pd.read_csv(TEST_FIXED)
@@ -247,11 +307,17 @@ if __name__ == "__main__":
         )
         
         # Validation Predictions
-        print(f"\n>>> Evaluating {exp['name']}...")
+        print(f"\nEvaluating {exp['name']}...")
         val_probs = model.predict(X_val_pad)
         val_preds = np.argmax(val_probs, axis=1)
         acc = accuracy_score(y_val_numeric, val_preds)
-        print(f"    Accuracy: {acc:.2%}")
+        
+        print(f"Validation Accuracy: {acc:.2%}")
+        
+        # CONFUSION MATRIX FOR EACH MODEL
+        print(f"\nConfusion Matrix for {exp['name']}:")
+        print(confusion_matrix(y_val_numeric, val_preds))
+        print("-" * 30)
         
         # Store probs for ensemble
         model_predictions_val.append(val_probs)
@@ -264,19 +330,23 @@ if __name__ == "__main__":
         sub_preds = np.argmax(test_probs, axis=1)
         pd.DataFrame({'id': df_test['id'], 'review': le.inverse_transform(sub_preds)}).to_csv(exp['sub_file'], index=False)
 
-    #  ENSEMBLING 
+    # --- ENSEMBLING ---
     print("\n" + "="*50)
-    print(">>> ENSEMBLING (CNN + LSTM)")
+    print("ENSEMBLING (CNN + LSTM)")
     print("="*50)
     
-    #  Validation Score
+    # 1. Validation Score
     avg_probs_val = (model_predictions_val[0] + model_predictions_val[1]) / 2
     final_preds_val = np.argmax(avg_probs_val, axis=1)
     ensemble_acc = accuracy_score(y_val_numeric, final_preds_val)
     
     print(f"OFFLINE ENSEMBLE ACCURACY: {ensemble_acc:.2%}")
     
-    #  Test Submission
+    # Print Ensemble Confusion Matrix
+    print("\nEnsemble Confusion Matrix:")
+    print(confusion_matrix(y_val_numeric, final_preds_val))
+    
+    # 2. Test Submission
     avg_probs_test = (model_predictions_test[0] + model_predictions_test[1]) / 2
     final_preds_test = np.argmax(avg_probs_test, axis=1)
     

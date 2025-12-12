@@ -3,7 +3,8 @@ __pycache__/
 *.pyc
 
 # Datasets & Large Files
-Dataset/glove.6B.100d.txt
+Dataset/glove.6b/
+ModelPredicts/
 
 # Virtual Environments
 venv/

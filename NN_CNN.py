@@ -24,7 +24,7 @@ import BackTranslator
 TRAIN_FIXED = 'Dataset/train_fixed.csv'
 TEST_FIXED = 'Dataset/test_fixed.csv'
 BACK_TRANS_PATH = 'Dataset/train_back_translated.csv'
-GLOVE_PATH = 'Dataset/glove.6B.100d.txt'
+GLOVE_PATH = 'Dataset/glove.6b/glove.6B.200d.txt'
 
 # --- SETUP ---
 os.makedirs('SavedModels', exist_ok=True)
@@ -34,7 +34,7 @@ os.makedirs('new_dataset', exist_ok=True)
 # --- HYPERPARAMETERS ---
 MAX_WORDS = 22000       
 MAX_LEN = 300           
-EMBEDDING_DIM = 100     
+EMBEDDING_DIM = 200     
 BATCH_SIZE = 16         
 EPOCHS = 40             
 TEST_SIZE = 0.2         

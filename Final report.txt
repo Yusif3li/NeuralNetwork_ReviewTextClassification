@@ -1,0 +1,131 @@
+Trial 1: Baseline CNN (The Control Group)
+
+Architecture: 2 Convolutional Blocks (Filters: 128, 64) 
+                Global Max Pooling 
+                Dense Layer (64 units).
+
+Parameters: 10 Epochs, Batch Size 32, Embedding Dim 100.
+
+Results:
+Training Accuracy: 95.88%
+Validation Accuracy: 45.79%
+
+Observations: The model exhibited severe overfitting.
+              While the training loss dropped consistently to 0.10, the validation loss began to diverge and increase after Epoch 3.
+              The model effectively memorized the training set but failed to generalize to unseen data.
+
+Conclusion: The current architecture is too complex or lacks sufficient regularization for the dataset size.
+
+Next Step: Introduce Early Stopping to halt training before divergence and increase Dropout to prevent memorization.
+
+######################################################################################################################################
+Trial 2: Early Stopping & Dropout (The Regularization Attempt)
+
+Architecture: Same as Trial 1 (2 Conv Blocks), but with Dropout increased to 0.6.
+
+Parameters: Early Stopping (Patience=3).
+
+Results:
+Training Accuracy: 72.34%
+Validation Accuracy: 42.64%
+
+Observations: Early stopping successfully prevented the massive overfitting seen in Trial 1.
+              However, the model performance degraded compared to the baseline.
+              The confusion matrix reveals a significant overlap between the "Excellent" and "Very Good" classes.
+
+Conclusion: We successfully killed the overfitting, but the model is now struggling to learn useful features. 
+            It is extracting noise rather than signal.
+
+Next Step: Mere regularization isn't enough. We need to change the architecture to capture wider context (N-Grams) to distinguish between subtle sentiments.
+
+######################################################################################################################################
+Trial 5: Multi-Kernel CNN (The Breakthrough)
+
+Architecture: Parallel Conv1D branches with kernel sizes [3, 4, 5], concatenated.
+Parameters: 64 Filters per branch, L2 Regularization, Dropout 0.5.
+
+Results:
+Training Accuracy: 86.95%
+Validation Accuracy: 52.36% 
+
+Observations: The multi-kernel approach significantly outperformed the single-kernel CNN.
+              By capturing variable-length n-grams (3, 4, and 5 words),
+              the model improved its ability to distinguish between adjacent sentiment classes.
+
+Conclusion: Context size matters. Pure CNNs can perform well if allowed to see wider context windows.
+
+Next Step: We need to find a way to stabilize this high-accuracy architecture without losing its predictive power.
+
+################################################################################################################################################
+Trial 8: Small Model + Spatial Dropout (The Limit of Regularization)
+
+Architecture: Small Parallel Conv1D branches (32 filters) -> GlobalMaxPooling -> Concatenate -> Dense (64 units).
+Parameters: Embedding Dim reduced to 50, SpatialDropout1D (0.3), Increased L2 Regularization (0.02).
+
+Results:
+Training Accuracy: 61.43%
+Validation Accuracy: 44.21%
+
+Observations: This trial successfully eliminated the severe overfitting.
+              The gap between training (61%) and validation (44%) dropped to ~17%, which is healthy.
+              However, the aggressive reduction in parameters caused the model to underfit—it became too "weak" to capture the complex nuances of sentiment.
+
+Conclusion: We have found the "floor" of our model's complexity.
+            We successfully fixed the overfitting issue, but we cut too much "brain power."
+
+Next Step: Explore external knowledge (Pre-trained Embeddings) to boost performance without adding architectural complexity.
+
+################################################################################################################################################
+Trial 11: Multi-Kernel + GloVe Embeddings (The Failed Hypothesis)
+
+Architecture: Pre-trained GloVe Embedding Layer -> SpatialDropout1D -> Parallel Conv1D branches (Kernels 3, 4, 5) -> Global Max Pooling -> Concatenate -> Dense.
+Parameters: Embedding Dim 100 (GloVe), 64 Filters, Spatial Dropout 0.3, L2 Regularization 0.001.
+
+Results:
+Training Accuracy: 81.63%
+Validation Accuracy: 47.14%
+
+Observations: The addition of pre-trained GloVe embeddings did not improve performance over the baseline.
+              The model converged quickly but plateaued at a lower accuracy (47%) compared to the model that learned embeddings from scratch (Trial 5, 52%).
+
+Conclusion: Simply adding external embeddings is not a magic bullet. 
+            The external knowledge from GloVe appears to be less relevant than domain-specific features if not integrated correctly.
+
+Next Step: Return to architectural improvements (Pooling strategies) before revisiting Embeddings.
+
+################################################################################################################################################
+Trial 20: The Merger (Dual Pooling + Label Smoothing)
+
+Architecture: Parallel Conv1D -> Dual Pooling (Concatenate Max + Avg) -> Dense.
+Parameters: SpatialDropout=0.2, L2=0.001, Pooling=Dual(Max+Avg), Smooth=0.1.
+
+Results:
+Validation Accuracy: 51.79%
+
+Observations: This trial was a strong success, reaching 51.79% accuracy, nearly matching our best historical run.
+              By combining Max Pooling (sharp features) and Average Pooling (smooth features), the model achieved high recall for "Excellent" (0.77) while maintaining respectable 	      recall for "Very Good" (0.40).
+
+Conclusion: Dual Pooling is a highly effective strategy for this dataset, providing a richer feature representation than either pooling method alone.
+
+Next Step: Combine the stability of Dual Pooling with a fixed version of the GloVe strategy to create a final, robust model.
+
+################################################################################################################################################
+Trial 31: The Final Synthesis (Frozen GloVe + Dual Augmentation)
+
+Architecture: Parallel Conv1D (Kernels 3, 4, 5) -> Batch Norm -> Global Average Pooling -> Dense.
+Parameters: Embeddings=GloVe (Frozen), Augmentation=NLTK + Back-Translation, Pooling=Avg.
+
+Results:
+Training Accuracy: ~59%
+Validation Accuracy: 54.57% (New Best Record)
+
+Observations: This model achieved the highest validation accuracy (52.71%) of all trials.
+              Most importantly, it is the most stable model. The gap between Training (~59%) and Validation (54.57%) is minimal, indicating zero overfitting.
+              Merging NLTK augmentation with Back-Translation provided a diverse training set that prevented memorization.
+
+Conclusion: We have finally surpassed the baseline. 
+            The combination of Frozen Pre-trained Embeddings (for stability), Aggressive Augmentation (for variety), and Average Pooling (for generalization) is the winning 	  	    architecture.
+
+Next Step: no next step , This is the final selected model for the project. (till now at least)
+
+################################################################################################################################################
