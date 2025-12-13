@@ -1,45 +1,45 @@
 id,review
 298,Excellent
-4153,Very good
-5359,Very good
+4153,Good
+5359,Good
 7734,Very good
 3283,Good
 9321,Excellent
 4945,Very good
 6246,Good
 8882,Very good
-5839,Good
+5839,Bad
 9167,Very bad
-6318,Good
+6318,Very good
 6582,Excellent
-9288,Good
-6161,Bad
+9288,Bad
+6161,Very bad
 8723,Excellent
 7697,Good
-2257,Very good
+2257,Good
 8672,Very good
 8306,Excellent
 9688,Excellent
 4755,Excellent
-109,Very good
-2237,Bad
+109,Excellent
+2237,Good
 5936,Good
 6644,Excellent
-3879,Very good
-2229,Very good
+3879,Excellent
+2229,Good
 2138,Good
 8120,Excellent
 6459,Good
 9504,Excellent
 962,Very bad
-7332,Good
+7332,Very good
 4733,Excellent
 1182,Bad
 3973,Very good
 2274,Excellent
-2975,Good
+2975,Bad
 4998,Very good
-120,Excellent
+120,Very good
 364,Bad
 5292,Excellent
 1088,Very good
@@ -48,11 +48,11 @@ id,review
 8660,Excellent
 3206,Very good
 4620,Very good
-5078,Good
+5078,Excellent
 453,Excellent
 8192,Very good
 967,Very bad
-5195,Excellent
+5195,Bad
 5747,Good
 1301,Very good
 4662,Excellent
@@ -62,51 +62,51 @@ id,review
 8369,Very good
 3449,Bad
 5287,Very good
-9305,Very good
-3403,Very good
+9305,Good
+3403,Good
 7301,Excellent
 3617,Very good
-9136,Very good
-3884,Very good
+9136,Good
+3884,Excellent
 3974,Good
 7309,Good
-2726,Very bad
-7361,Very good
-6081,Very good
+2726,Bad
+7361,Excellent
+6081,Bad
 6590,Good
-6702,Bad
+6702,Very bad
 720,Very good
 1176,Excellent
 6181,Excellent
-1024,Very good
+1024,Very bad
 1151,Excellent
-1451,Very good
+1451,Excellent
 2653,Excellent
 4862,Very bad
-8498,Excellent
-9862,Good
+8498,Very good
+9862,Very good
 1739,Very good
 7345,Very bad
 2242,Bad
-1895,Very good
+1895,Excellent
 5302,Very bad
-4581,Very good
+4581,Good
 2151,Very good
 8315,Good
-9364,Very good
+9364,Good
 8788,Excellent
 8906,Very good
 7377,Very bad
-2039,Very good
+2039,Excellent
 1989,Good
 7314,Excellent
 321,Bad
 1,Good
 5950,Bad
-4440,Very good
+4440,Excellent
 4417,Good
-7282,Excellent
-694,Very good
+7282,Good
+694,Good
 2531,Very good
 6115,Excellent
 1369,Excellent
@@ -114,20 +114,20 @@ id,review
 5635,Very good
 6026,Very bad
 6058,Excellent
-4528,Very good
+4528,Excellent
 8027,Very good
 7231,Very good
 5975,Bad
 7518,Good
-433,Very good
+433,Good
 4718,Good
 4470,Very good
-9524,Good
+9524,Bad
 8244,Very bad
 9265,Excellent
 9811,Excellent
 7256,Very good
-8545,Very bad
+8545,Bad
 3265,Very good
 8440,Good
 871,Very good
@@ -143,7 +143,7 @@ id,review
 7757,Excellent
 5132,Good
 2276,Very good
-457,Good
+457,Bad
 7729,Very good
 8664,Very good
 499,Excellent
@@ -151,32 +151,32 @@ id,review
 7274,Very good
 848,Excellent
 1232,Good
-6916,Good
+6916,Bad
 4637,Excellent
 4221,Good
 5614,Very good
 4868,Excellent
 9150,Excellent
-4201,Good
+4201,Bad
 7420,Very good
 9762,Good
 1047,Very bad
 247,Very good
-3102,Good
-4090,Excellent
+3102,Bad
+4090,Bad
 8751,Very good
-7837,Very good
-2798,Excellent
-3927,Very good
-8348,Very good
-610,Very good
+7837,Good
+2798,Good
+3927,Good
+8348,Good
+610,Good
 8460,Good
 4380,Excellent
-5878,Good
+5878,Bad
 8404,Excellent
-50,Very good
+50,Bad
 333,Excellent
-2546,Good
+2546,Bad
 4602,Bad
 1041,Good
 2240,Excellent
@@ -186,21 +186,21 @@ id,review
 1783,Excellent
 8667,Good
 9030,Good
-7073,Excellent
-5122,Very good
+7073,Very good
+5122,Excellent
 8979,Good
 696,Excellent
-2516,Good
-3422,Very good
+2516,Very good
+3422,Good
 3497,Very bad
 1390,Very good
 9063,Excellent
-5755,Excellent
+5755,Very good
 4392,Good
 6386,Excellent
 9831,Excellent
-5815,Excellent
-4033,Good
+5815,Very good
+4033,Bad
 2948,Very good
 3417,Good
 5814,Bad
@@ -212,113 +212,113 @@ id,review
 3201,Excellent
 5093,Excellent
 9249,Very good
-1119,Very good
+1119,Excellent
 2589,Excellent
 9332,Good
 7810,Very good
 2105,Very good
-5898,Very good
+5898,Good
 4454,Very good
 4950,Excellent
 3,Excellent
-2155,Very good
-9180,Good
-2850,Excellent
+2155,Excellent
+9180,Very good
+2850,Very good
 8231,Bad
 359,Very good
 9420,Very good
 71,Very bad
 18,Good
 8281,Excellent
-6542,Very good
+6542,Excellent
 8838,Very good
 6262,Excellent
-9556,Excellent
+9556,Very good
 8561,Excellent
-1901,Good
+1901,Very good
 1346,Bad
-9046,Very good
-4971,Good
-6164,Very good
+9046,Good
+4971,Very good
+6164,Good
 3902,Excellent
-1448,Excellent
+1448,Very good
 1753,Excellent
-1372,Good
-4347,Very good
-8234,Very good
+1372,Bad
+4347,Excellent
+8234,Excellent
 7885,Excellent
 5432,Bad
 485,Good
 3141,Bad
 4748,Excellent
-6122,Excellent
-7010,Good
+6122,Very good
+7010,Bad
 6411,Good
 1224,Very good
 6967,Good
-7514,Very good
+7514,Excellent
 53,Good
 8763,Good
-1614,Good
-1183,Very bad
+1614,Bad
+1183,Excellent
 1049,Excellent
-1966,Very bad
+1966,Bad
 1859,Excellent
 6287,Good
 273,Good
 5862,Excellent
-8402,Very bad
+8402,Bad
 7752,Very good
 3813,Excellent
 6678,Excellent
 6835,Good
-3967,Very good
+3967,Good
 3689,Very good
-435,Very good
-6184,Very good
+435,Good
+6184,Excellent
 4885,Very good
 2346,Excellent
 3076,Good
 8663,Good
-7353,Very good
-7323,Good
+7353,Good
+7323,Very good
 2231,Bad
 6565,Excellent
 8343,Very good
-2814,Good
+2814,Bad
 8985,Excellent
 7054,Good
 2213,Good
 2711,Very good
 428,Good
-8984,Very good
-8441,Very good
-5054,Very good
-1386,Very good
-5786,Very good
+8984,Good
+8441,Good
+5054,Excellent
+1386,Excellent
+5786,Excellent
 378,Very good
 5712,Excellent
-6279,Very good
+6279,Good
 165,Bad
 470,Good
 9512,Excellent
 8544,Excellent
-5281,Bad
+5281,Good
 9597,Excellent
 2926,Good
 9582,Very good
 9336,Excellent
-7221,Very good
+7221,Excellent
 8901,Very good
 2852,Very good
-9955,Good
+9955,Bad
 1098,Very good
 22,Excellent
 7021,Very good
 2239,Very good
 4073,Excellent
 2810,Very good
-3113,Bad
+3113,Excellent
 8537,Very good
 5297,Very good
 2038,Excellent
@@ -326,27 +326,27 @@ id,review
 9542,Excellent
 8426,Very good
 5124,Excellent
-2716,Very good
+2716,Good
 157,Excellent
 6339,Very good
 5994,Very good
 6407,Very good
 2555,Very good
 5337,Very good
-5687,Very good
+5687,Very bad
 1492,Bad
 4903,Excellent
 8697,Very good
-953,Very good
-1790,Good
+953,Bad
+1790,Bad
 379,Excellent
-3324,Very good
+3324,Excellent
 1866,Very good
-5154,Bad
+5154,Very bad
 8719,Very good
 8055,Very good
 2291,Excellent
-2090,Excellent
+2090,Very good
 595,Good
 2063,Excellent
 9739,Very good
@@ -354,11 +354,11 @@ id,review
 9828,Very good
 7648,Excellent
 993,Very good
-7022,Very good
-191,Very good
+7022,Excellent
+191,Excellent
 956,Excellent
 3782,Very good
-2771,Good
+2771,Bad
 2103,Good
 4395,Excellent
 1190,Very good
@@ -366,9 +366,9 @@ id,review
 4985,Very good
 4559,Excellent
 8669,Excellent
-4273,Very bad
+4273,Bad
 1297,Very bad
-855,Very good
+855,Good
 9879,Good
 1574,Very good
 5653,Very good
@@ -378,13 +378,13 @@ id,review
 286,Very good
 627,Very good
 8462,Excellent
-5715,Very good
+5715,Excellent
 260,Excellent
 3370,Good
 463,Good
 525,Very good
 7770,Good
-8290,Excellent
+8290,Very good
 1361,Very good
 7212,Good
 1583,Very good
@@ -392,23 +392,23 @@ id,review
 3758,Very good
 5893,Excellent
 9329,Excellent
-422,Very good
-5891,Good
+422,Good
+5891,Excellent
 2905,Very good
-6765,Good
+6765,Bad
 3828,Excellent
 589,Excellent
 2999,Very good
 4134,Very good
-7874,Bad
+7874,Very bad
 1698,Very good
 9674,Good
 5982,Good
-3399,Very good
+3399,Good
 1056,Very good
 344,Very good
 7776,Excellent
-6703,Excellent
+6703,Very good
 2440,Very good
 2446,Very good
 6179,Good
@@ -416,65 +416,65 @@ id,review
 3325,Very good
 7483,Excellent
 2476,Bad
-6370,Excellent
+6370,Very good
 1864,Bad
 3607,Excellent
 5041,Excellent
 4502,Good
-8212,Very good
+8212,Good
 2822,Very bad
 8865,Good
 7261,Good
 5946,Very good
 2646,Good
-7534,Good
-4298,Very bad
+7534,Very good
+4298,Bad
 2963,Very good
 4187,Good
 1906,Very good
-7513,Very good
+7513,Excellent
 146,Excellent
 8345,Excellent
 9215,Very good
 4426,Good
 1535,Excellent
 5648,Very good
-5999,Very good
-1618,Very good
+5999,Good
+1618,Good
 9876,Good
-6158,Good
-7412,Good
+6158,Very good
+7412,Bad
 6741,Excellent
 124,Excellent
 5318,Very good
-5184,Very good
+5184,Excellent
 6189,Very good
 9759,Very good
-8860,Good
-1385,Very bad
+8860,Very good
+1385,Bad
 7780,Excellent
 8021,Excellent
 2571,Very good
 7804,Very good
 2675,Good
 9608,Very good
-6536,Very good
+6536,Good
 9311,Excellent
-483,Good
+483,Bad
 4289,Very good
 6031,Very good
-7167,Bad
+7167,Very bad
 8164,Good
 5608,Excellent
 1932,Good
-8135,Excellent
+8135,Very good
 3168,Good
 9173,Excellent
-708,Good
+708,Very good
 5929,Excellent
 2828,Very good
 242,Excellent
-7286,Very good
+7286,Good
 9485,Very good
 8415,Excellent
 3415,Very good
@@ -485,31 +485,31 @@ id,review
 3214,Good
 2996,Excellent
 886,Very good
-9520,Very good
+9520,Good
 6096,Excellent
 9506,Excellent
-5724,Very good
-4369,Good
-8610,Good
-5247,Good
-7655,Good
+5724,Excellent
+4369,Bad
+8610,Bad
+5247,Bad
+7655,Bad
 498,Good
 3587,Very good
 6127,Excellent
 371,Very good
 758,Bad
 1785,Excellent
-7853,Very good
+7853,Excellent
 3386,Very good
 3523,Very bad
-3825,Good
-5340,Excellent
-8033,Bad
-2398,Very good
+3825,Very good
+5340,Very bad
+8033,Good
+2398,Excellent
 2795,Good
-7783,Very good
-4166,Very good
-3634,Very bad
+7783,Excellent
+4166,Excellent
+3634,Bad
 383,Very good
 6760,Good
 5591,Very good
@@ -517,105 +517,105 @@ id,review
 4081,Very good
 2180,Very good
 7807,Excellent
-121,Very good
+121,Excellent
 1599,Good
 3045,Excellent
 8092,Very good
-2678,Bad
+2678,Very bad
 6083,Very good
-9777,Very good
+9777,Excellent
 6006,Very good
-2336,Excellent
+2336,Very good
 6954,Good
-7117,Very good
+7117,Excellent
 7958,Very good
 7791,Excellent
 6133,Bad
-9930,Very good
+9930,Good
 1210,Excellent
 7716,Very good
 3696,Good
-2462,Excellent
+2462,Very bad
 4152,Very good
 6332,Very good
 826,Very good
 2451,Good
-3737,Good
-3103,Very good
-7756,Excellent
-5836,Very good
+3737,Bad
+3103,Good
+7756,Very good
+5836,Excellent
 3254,Very good
 2190,Very good
 9607,Very bad
 7364,Very good
-7628,Very good
-1309,Very good
+7628,Good
+1309,Excellent
 5701,Very good
 6983,Excellent
 7276,Good
 2674,Very bad
-8318,Very good
+8318,Good
 6159,Very bad
 1330,Very good
 9780,Good
 1305,Excellent
-7172,Good
+7172,Bad
 8409,Good
-8615,Good
-7236,Very good
-4310,Excellent
+8615,Very bad
+7236,Bad
+4310,Very good
 5877,Excellent
 8892,Excellent
-4374,Good
+4374,Bad
 8981,Very good
-7745,Very good
-6490,Very bad
+7745,Good
+6490,Bad
 4093,Very good
 4198,Excellent
 3232,Very good
 5623,Excellent
 2657,Good
 6680,Good
-1674,Very good
+1674,Good
 1320,Very good
 132,Excellent
 3827,Excellent
 6108,Very good
-5707,Excellent
+5707,Very bad
 2956,Very good
 3303,Excellent
 8714,Very good
-4522,Very good
+4522,Excellent
 6365,Good
 4498,Very good
-5637,Very good
+5637,Excellent
 4918,Very bad
 9806,Very good
 2951,Excellent
-9168,Good
-6821,Good
+9168,Bad
+6821,Bad
 4025,Very good
-7308,Good
+7308,Bad
 7489,Good
 5803,Excellent
-3816,Bad
+3816,Very bad
 2062,Very good
 4330,Excellent
-5288,Very good
+5288,Excellent
 4898,Good
 2082,Very good
 4984,Excellent
 9042,Very good
-7066,Very bad
+7066,Bad
 5926,Very good
-5017,Very good
-5921,Good
-6426,Very good
+5017,Excellent
+5921,Very good
+6426,Good
 7421,Excellent
 9796,Very good
 5058,Excellent
 5899,Very good
-8483,Good
+8483,Very bad
 655,Very good
 5818,Good
 6032,Very good
@@ -623,51 +623,51 @@ id,review
 818,Very good
 336,Excellent
 5294,Bad
-385,Very good
+385,Excellent
 2718,Excellent
-6419,Very good
-8507,Very good
+6419,Excellent
+8507,Very bad
 9478,Excellent
 6719,Very good
-7108,Bad
+7108,Good
 6088,Very good
 2052,Excellent
-9625,Very good
+9625,Bad
 4552,Excellent
 7042,Good
-2005,Good
+2005,Bad
 1514,Excellent
 3223,Excellent
-5935,Very bad
-937,Very good
-1808,Good
+5935,Excellent
+937,Excellent
+1808,Very bad
 1465,Good
 1542,Very good
-1704,Very good
+1704,Good
 2187,Bad
 5113,Excellent
 5218,Bad
-4842,Very bad
-6229,Bad
+4842,Bad
+6229,Very bad
 8575,Excellent
-1777,Very good
+1777,Good
 7184,Very bad
 1491,Very good
-9621,Very good
+9621,Excellent
 6803,Good
 3886,Very good
 4411,Very good
-7786,Good
+7786,Bad
 3761,Very good
 9543,Excellent
 9564,Very bad
 9638,Very bad
 1995,Excellent
 5367,Excellent
-7162,Very good
+7162,Good
 2803,Very good
 4593,Excellent
-6076,Excellent
+6076,Very bad
 8286,Very good
 2668,Very good
 5174,Very good
@@ -678,63 +678,63 @@ id,review
 9123,Excellent
 4,Excellent
 9351,Very bad
-3874,Very good
-4923,Good
+3874,Good
+4923,Bad
 9233,Very good
 9038,Excellent
 3181,Excellent
 5240,Excellent
 3869,Excellent
-8198,Very good
-442,Excellent
+8198,Good
+442,Bad
 1025,Very bad
 8205,Excellent
-1213,Very good
+1213,Good
 6567,Very good
 2642,Bad
-6794,Very good
+6794,Excellent
 8572,Very good
 3515,Good
-7617,Good
-2347,Very good
-4148,Very good
-4894,Very good
+7617,Very good
+2347,Excellent
+4148,Excellent
+4894,Good
 1615,Very good
 5599,Good
-2834,Very good
+2834,Excellent
 3658,Good
 4400,Good
-6745,Good
+6745,Bad
 4285,Very good
 3167,Excellent
 3591,Excellent
 6783,Excellent
-3997,Very good
+3997,Excellent
 6940,Excellent
 1526,Very good
-3759,Excellent
+3759,Bad
 5848,Excellent
-6977,Very bad
+6977,Bad
 4883,Very good
 8854,Good
-2028,Very good
+2028,Good
 8121,Very good
 5992,Very good
 1929,Very good
 231,Excellent
-2109,Very good
+2109,Excellent
 7400,Very good
 7596,Very good
 9426,Excellent
-8051,Very good
-3021,Very good
+8051,Bad
+3021,Good
 8009,Excellent
 4214,Excellent
 4664,Very good
 1459,Very good
-9255,Good
+9255,Very good
 8333,Excellent
-3912,Excellent
+3912,Very good
 3993,Good
 9197,Very good
 6903,Excellent
@@ -745,42 +745,42 @@ id,review
 7169,Very good
 4544,Excellent
 7549,Excellent
-9640,Good
+9640,Very bad
 2250,Very good
 3057,Good
 2121,Very good
 8093,Very good
-6485,Very good
+6485,Bad
 5988,Excellent
-4011,Very good
+4011,Excellent
 6507,Excellent
 3678,Excellent
 8774,Very good
 3990,Very good
 2529,Good
-8826,Excellent
+8826,Very good
 9074,Very good
 7843,Very good
 6486,Excellent
-4433,Good
+4433,Bad
 8782,Good
 4538,Excellent
-2127,Very good
+2127,Excellent
 7423,Very good
 7831,Very bad
 6037,Bad
 1971,Very good
-475,Very good
+475,Good
 8133,Good
-2478,Good
+2478,Bad
 7068,Excellent
 6788,Good
 7437,Bad
-8172,Excellent
+8172,Very good
 8822,Very bad
 6976,Good
 5056,Excellent
-9928,Very good
+9928,Good
 3784,Very good
 2095,Very good
 6300,Very good
@@ -795,19 +795,19 @@ id,review
 9297,Excellent
 2025,Very good
 2203,Bad
-3657,Very good
+3657,Good
 8959,Excellent
 4444,Good
-8638,Very good
+8638,Excellent
 2691,Very good
 3962,Excellent
 226,Excellent
 1231,Good
-1600,Very good
+1600,Excellent
 6107,Good
 8643,Good
 5823,Good
-1802,Very bad
+1802,Very good
 8422,Very good
 2739,Excellent
 9103,Excellent
@@ -816,98 +816,98 @@ id,review
 2884,Very good
 2898,Very good
 7452,Good
-3545,Excellent
+3545,Very good
 1590,Very good
 547,Excellent
 3418,Very good
 7401,Very good
-7865,Excellent
-6961,Very good
+7865,Very good
+6961,Excellent
 6134,Very good
 1994,Bad
 8512,Excellent
 8599,Excellent
 8156,Excellent
-6347,Very good
+6347,Good
 2080,Excellent
 5887,Excellent
 9466,Very good
 3109,Good
 965,Very good
-3129,Excellent
+3129,Very good
 6928,Bad
 6155,Excellent
 3474,Bad
-6412,Good
+6412,Very good
 4682,Excellent
-135,Very good
+135,Excellent
 2171,Good
 6964,Very good
 1970,Good
-9991,Very good
+9991,Good
 3926,Excellent
 8116,Good
-1623,Very good
-9290,Very good
+1623,Excellent
+9290,Excellent
 9492,Good
 1292,Excellent
-6868,Excellent
+6868,Very bad
 793,Very good
-2616,Very bad
+2616,Bad
 9669,Very good
 2295,Bad
 3621,Very good
 4904,Very good
-1621,Very bad
+1621,Bad
 3275,Very good
 5735,Excellent
-5577,Very good
+5577,Good
 1954,Very good
-9134,Very good
-6182,Very good
+9134,Good
+6182,Good
 947,Excellent
 5343,Very good
 9107,Good
 5537,Very good
-5091,Good
-9127,Very good
-4349,Very good
-1286,Very good
+5091,Bad
+9127,Good
+4349,Good
+1286,Good
 918,Good
-2380,Very good
+2380,Excellent
 2703,Very good
 8175,Very good
 6935,Very good
 7589,Very good
-1547,Very good
-8775,Good
+1547,Bad
+8775,Very bad
 8137,Excellent
-754,Very good
+754,Excellent
 3382,Very good
-7909,Good
+7909,Bad
 9938,Excellent
-5738,Very good
+5738,Excellent
 973,Excellent
 1643,Good
 3566,Very good
 1731,Very good
 2896,Good
-3763,Very good
+3763,Excellent
 2622,Good
 8194,Very good
 3870,Very bad
-9891,Bad
+9891,Good
 6857,Excellent
 6445,Very good
 7418,Very good
 9128,Very bad
-8640,Very good
+8640,Good
 3010,Excellent
 6151,Excellent
 8278,Very good
 142,Very good
 3787,Excellent
-3084,Excellent
+3084,Very good
 8564,Good
 9771,Very good
 5923,Excellent
@@ -916,37 +916,37 @@ id,review
 2355,Excellent
 2404,Excellent
 8243,Very good
-1164,Excellent
-9312,Good
+1164,Very good
+9312,Bad
 4244,Excellent
 3396,Very good
 824,Good
 8158,Good
-8,Very good
+8,Excellent
 7120,Good
 3179,Excellent
 6898,Very good
-545,Excellent
+545,Very good
 774,Very good
-6900,Good
+6900,Bad
 9918,Very good
-7651,Good
+7651,Bad
 8276,Good
 511,Very good
 3423,Excellent
-9540,Very good
-1832,Excellent
-7820,Very good
+9540,Excellent
+1832,Very good
+7820,Good
 4497,Very good
-9534,Very good
-7723,Excellent
+9534,Excellent
+7723,Very good
 2329,Excellent
 3776,Excellent
 8087,Very good
 3253,Very good
 3505,Very bad
 7494,Very good
-7610,Very good
+7610,Excellent
 1963,Bad
 9325,Good
 7794,Good
@@ -955,15 +955,15 @@ id,review
 9443,Very good
 808,Very good
 6015,Good
-3233,Very good
+3233,Excellent
 4422,Excellent
 9940,Very good
-1430,Good
+1430,Very good
 8913,Good
-1203,Very good
+1203,Excellent
 7255,Very good
 7703,Excellent
-2418,Good
+2418,Very good
 2168,Excellent
 557,Excellent
 2647,Excellent
@@ -971,158 +971,158 @@ id,review
 7090,Excellent
 3943,Excellent
 2294,Very good
-7916,Good
+7916,Bad
 8254,Very good
 4009,Excellent
 5476,Excellent
-2249,Very good
+2249,Excellent
 7750,Good
 4973,Excellent
-8108,Very good
+8108,Excellent
 8408,Very good
 6652,Very good
 9667,Good
 1743,Good
 9320,Very good
-6094,Very good
+6094,Good
 7725,Excellent
-4204,Very good
+4204,Excellent
 9418,Good
-963,Very good
-2745,Very good
+963,Excellent
+2745,Excellent
 4050,Very good
-2993,Excellent
+2993,Very good
 431,Excellent
 2866,Excellent
 1180,Bad
 1756,Good
 6039,Excellent
 7303,Excellent
-3456,Excellent
+3456,Bad
 4677,Excellent
 443,Very good
-3205,Good
+3205,Very good
 3100,Excellent
 149,Excellent
 9219,Very good
 2470,Excellent
 5153,Bad
-2340,Good
+2340,Very good
 3756,Very bad
-208,Bad
+208,Very bad
 5252,Excellent
 1678,Excellent
 9924,Very bad
 6580,Excellent
-3674,Very good
-9282,Excellent
+3674,Good
+9282,Very good
 6842,Excellent
 6820,Very bad
 2560,Very good
 2618,Excellent
 8620,Very bad
 9065,Excellent
-2081,Good
+2081,Very bad
 6049,Very good
-9133,Very good
-8859,Very good
+9133,Good
+8859,Good
 3149,Bad
 6406,Bad
-3291,Excellent
+3291,Very good
 9888,Very good
-8165,Very good
-3185,Very bad
-8455,Good
-2484,Very good
-5907,Very good
-7384,Good
+8165,Good
+3185,Bad
+8455,Bad
+2484,Good
+5907,Excellent
+7384,Bad
 8153,Excellent
 1728,Excellent
 3276,Excellent
 5433,Very good
-2433,Very good
-2952,Good
+2433,Good
+2952,Very bad
 4539,Very good
-4838,Good
+4838,Very good
 205,Very good
 6526,Excellent
 6294,Very good
-3139,Very good
-6988,Very good
+3139,Excellent
+6988,Good
 6659,Very good
-2705,Good
+2705,Bad
 5329,Good
-3014,Very good
+3014,Good
 8505,Very good
 3945,Good
-1392,Very good
+1392,Excellent
 9668,Excellent
 9749,Very good
 6713,Very bad
 1609,Good
 4731,Very good
-1918,Very bad
-2817,Good
+1918,Bad
+2817,Very good
 6460,Excellent
 5704,Excellent
-7798,Good
+7798,Very good
 8628,Very good
 8429,Very bad
 6559,Good
 3136,Excellent
 7225,Very good
 182,Very good
-8707,Very good
+8707,Excellent
 492,Good
 575,Good
-4119,Good
+4119,Bad
 9892,Excellent
 5316,Very good
 2178,Good
 462,Excellent
 2501,Excellent
 2126,Very good
-9675,Bad
-8271,Good
-9904,Very good
+9675,Good
+8271,Bad
+9904,Excellent
 340,Good
 1800,Very good
 6811,Very good
-3539,Bad
+3539,Very bad
 1710,Good
 3575,Good
-4607,Very good
-8927,Very good
+4607,Good
+8927,Excellent
 1693,Very good
 8407,Very good
-9569,Very good
+9569,Good
 8704,Very good
 4191,Very good
 5001,Very good
-3616,Excellent
-5732,Good
-2861,Very good
-151,Excellent
+3616,Very good
+5732,Bad
+2861,Good
+151,Very good
 5220,Excellent
-5350,Very good
+5350,Good
 3688,Excellent
 6989,Good
 8232,Bad
 3257,Excellent
-2713,Very good
+2713,Excellent
 6034,Very good
 2216,Excellent
-2459,Very good
-2650,Very good
+2459,Good
+2650,Excellent
 1549,Very good
 9414,Excellent
-7445,Good
+7445,Bad
 1383,Good
 3506,Very good
-2029,Excellent
-2855,Excellent
-2918,Good
-732,Very good
+2029,Very good
+2855,Very good
+2918,Very good
+732,Excellent
 5870,Very good
 1951,Very good
 4627,Good
@@ -1133,68 +1133,68 @@ id,review
 3977,Excellent
 7773,Excellent
 5425,Very good
-9453,Very good
-4278,Very good
-2629,Good
-5641,Excellent
+9453,Good
+4278,Very bad
+2629,Excellent
+5641,Very good
 7846,Excellent
 3210,Very bad
 7182,Very good
 7960,Excellent
 6742,Very good
-4376,Good
+4376,Bad
 3747,Very good
 4737,Excellent
 4069,Very good
-1124,Very good
-9817,Good
+1124,Excellent
+9817,Bad
 5443,Very bad
 7813,Excellent
 125,Good
 5866,Excellent
 8862,Good
-52,Good
+52,Very good
 5763,Very good
 8519,Very bad
 8752,Very good
 69,Excellent
 455,Good
-5739,Good
+5739,Bad
 844,Bad
-5313,Bad
-6025,Good
+5313,Very bad
+6025,Bad
 1277,Very good
 9528,Excellent
-5604,Excellent
+5604,Very good
 535,Very good
-2933,Very good
+2933,Excellent
 8792,Very bad
-1322,Very good
-2530,Excellent
+1322,Good
+2530,Good
 1133,Very good
 7163,Good
 9163,Excellent
 8338,Very good
-1068,Very good
+1068,Good
 7298,Excellent
-2941,Excellent
+2941,Very good
 4597,Very good
-3535,Very good
+3535,Good
 5364,Excellent
 8793,Good
 1556,Excellent
 9855,Excellent
-4064,Very good
+4064,Good
 5206,Very good
-2376,Good
+2376,Excellent
 9487,Bad
-8350,Very good
-3975,Very bad
-6708,Excellent
-3248,Excellent
+8350,Excellent
+3975,Bad
+6708,Bad
+3248,Bad
 2150,Very good
 7582,Bad
-7784,Good
+7784,Very good
 3806,Very good
 5594,Excellent
 1940,Bad
@@ -1203,10 +1203,10 @@ id,review
 4492,Good
 8920,Good
 9952,Good
-531,Good
+531,Bad
 927,Excellent
 8616,Excellent
-9076,Good
+9076,Very good
 2807,Good
 6650,Very good
 566,Bad
@@ -1219,34 +1219,34 @@ id,review
 3466,Good
 6325,Excellent
 7834,Excellent
-3666,Very good
-2842,Good
+3666,Excellent
+2842,Very good
 8684,Excellent
 5188,Good
-5858,Excellent
-6073,Very good
-7315,Good
-3034,Very good
-6472,Good
+5858,Very good
+6073,Excellent
+7315,Excellent
+3034,Good
+6472,Bad
 8593,Very good
 4343,Excellent
 6818,Very good
 6492,Very good
 3882,Very good
-628,Very good
+628,Excellent
 2223,Excellent
 6922,Very good
 6241,Very good
 9530,Good
-7994,Very bad
-7250,Bad
+7994,Excellent
+7250,Excellent
 6250,Excellent
 9547,Very good
-5902,Very good
+5902,Good
 2768,Very good
 1127,Good
-9139,Very bad
-6796,Very good
+9139,Bad
+6796,Excellent
 903,Very good
 3343,Very good
 989,Excellent
@@ -1256,16 +1256,16 @@ id,review
 3208,Very good
 4005,Very good
 238,Excellent
-3820,Very good
+3820,Good
 4354,Excellent
-7379,Very good
+7379,Good
 1853,Very good
-4407,Good
-1591,Very good
+4407,Very bad
+1591,Excellent
 6371,Good
 9783,Very good
 9415,Good
-5193,Very good
+5193,Good
 4983,Excellent
 5493,Excellent
 2353,Good
@@ -1273,27 +1273,27 @@ id,review
 400,Very good
 6353,Excellent
 277,Very good
-6380,Good
+6380,Bad
 1132,Very good
 6002,Excellent
 3796,Excellent
 9237,Excellent
 9753,Excellent
-9212,Good
+9212,Very good
 7510,Excellent
-6041,Bad
+6041,Very bad
 4162,Good
 8474,Excellent
 8168,Very good
 6429,Excellent
 1261,Excellent
 2576,Good
-2191,Good
+2191,Bad
 1720,Excellent
-3134,Very good
+3134,Excellent
 4818,Excellent
 3241,Excellent
-8363,Very good
+8363,Good
 6608,Very good
 2511,Excellent
 1942,Very good
@@ -1304,21 +1304,21 @@ id,review
 1242,Very good
 3508,Very good
 4988,Excellent
-4960,Very good
+4960,Excellent
 1543,Excellent
-1074,Very good
-9906,Very good
+1074,Excellent
+9906,Excellent
 195,Very good
 3006,Good
 3865,Excellent
 2110,Very good
-8275,Very good
+8275,Good
 6350,Very good
 2181,Excellent
 5572,Very good
 3124,Very good
 3407,Very bad
-4365,Excellent
+4365,Very good
 6202,Very good
 2830,Very good
 92,Very good
@@ -1328,31 +1328,31 @@ id,review
 9095,Bad
 8645,Excellent
 2370,Bad
-468,Bad
+468,Very bad
 5660,Very good
 5149,Excellent
-5547,Good
+5547,Bad
 6609,Excellent
 9256,Excellent
 2059,Good
 7235,Very good
-3197,Good
+3197,Bad
 7989,Good
 9986,Good
 5197,Very bad
 5584,Excellent
 1773,Very good
 4268,Excellent
-9967,Very good
+9967,Good
 6992,Good
 5973,Very good
 5829,Good
 7918,Good
 3659,Very good
-7521,Good
+7521,Bad
 4599,Excellent
 7680,Good
-4314,Very good
+4314,Good
 6661,Very good
 9786,Excellent
 2406,Very good
@@ -1362,8 +1362,8 @@ id,review
 502,Excellent
 6403,Very good
 3664,Very good
-2858,Very good
-6865,Good
+2858,Excellent
+6865,Bad
 2929,Good
 4414,Very good
 407,Bad
@@ -1373,17 +1373,17 @@ id,review
 4742,Very bad
 5156,Excellent
 9736,Good
-9271,Good
+9271,Very good
 9347,Excellent
-9031,Very good
-2637,Bad
+9031,Good
+2637,Good
 5397,Excellent
 8903,Very good
-8304,Excellent
+8304,Very good
 2767,Very bad
 1238,Excellent
-670,Very good
-3427,Very good
+670,Excellent
+3427,Good
 9856,Very good
 7147,Very good
 1648,Very good
@@ -1395,72 +1395,72 @@ id,review
 9554,Excellent
 7061,Very good
 3498,Excellent
-4177,Very good
-6663,Very good
+4177,Excellent
+6663,Excellent
 5497,Very good
 6023,Bad
 1255,Very good
 4655,Good
 1429,Good
-4186,Good
+4186,Very good
 3402,Very good
 4018,Very good
 9227,Very good
-7645,Bad
+7645,Very bad
 8475,Very good
 931,Excellent
 4739,Good
 2839,Excellent
-6561,Excellent
+6561,Very good
 6051,Bad
-916,Very good
+916,Good
 4600,Good
 2338,Good
 5095,Excellent
-9400,Bad
-9469,Very good
+9400,Very bad
+9469,Good
 1157,Very good
 8265,Excellent
-2157,Very good
+2157,Excellent
 7268,Good
-4364,Excellent
+4364,Very good
 5226,Excellent
-4608,Very good
+4608,Good
 6635,Excellent
 9750,Excellent
-5585,Very good
+5585,Good
 9015,Excellent
 6042,Good
 7778,Very good
 6942,Excellent
-1405,Very bad
+1405,Bad
 4827,Very good
 6597,Very good
-8525,Very good
+8525,Good
 8703,Bad
 9007,Very good
 9995,Good
-4311,Very good
-3211,Excellent
+4311,Excellent
+3211,Good
 3112,Very good
 5326,Very good
 9901,Excellent
 3436,Good
 2108,Very good
-5251,Very good
+5251,Good
 3390,Excellent
 3001,Good
 4884,Very good
 7525,Very good
-1541,Excellent
+1541,Good
 5924,Good
-8459,Very good
+8459,Excellent
 6397,Excellent
 5908,Excellent
 3443,Very good
 8693,Excellent
 1187,Bad
-3830,Excellent
+3830,Good
 2978,Bad
 587,Good
 5222,Good
@@ -1468,13 +1468,13 @@ id,review
 9535,Good
 1075,Excellent
 4127,Very bad
-2280,Very good
+2280,Very bad
 7084,Excellent
 466,Excellent
 9456,Excellent
 9060,Very good
 8805,Very good
-2326,Excellent
+2326,Good
 9284,Excellent
 2266,Excellent
 4404,Very good
@@ -1482,13 +1482,13 @@ id,review
 1128,Very good
 1554,Very good
 1719,Very good
-2315,Excellent
+2315,Very good
 8878,Excellent
-4529,Excellent
+4529,Very good
 1469,Good
 5182,Very good
-478,Excellent
-744,Very good
+478,Very good
+744,Excellent
 2443,Excellent
 8273,Very good
 3713,Good
@@ -1496,13 +1496,13 @@ id,review
 2621,Very bad
 9841,Excellent
 6442,Very good
-935,Very good
+935,Excellent
 4514,Good
 8412,Excellent
-3329,Very good
-7499,Very good
+3329,Excellent
+7499,Good
 5534,Very good
-8569,Good
+8569,Bad
 4991,Good
 3174,Good
 2815,Very good
@@ -1510,29 +1510,29 @@ id,review
 9732,Very good
 1321,Excellent
 7634,Excellent
-3930,Very good
+3930,Excellent
 2492,Very good
 7611,Excellent
 2397,Excellent
-3609,Good
+3609,Very bad
 7040,Excellent
-6711,Very good
+6711,Good
 439,Bad
-4356,Good
+4356,Bad
 2482,Excellent
 7317,Excellent
 9053,Excellent
-6456,Very good
+6456,Excellent
 1442,Bad
 3036,Excellent
 5833,Bad
 2310,Excellent
-5849,Excellent
+5849,Very good
 5342,Excellent
 9532,Very good
 7271,Excellent
 7297,Very good
-3346,Good
+3346,Bad
 4700,Good
 8069,Good
 1562,Very good
@@ -1544,18 +1544,18 @@ id,review
 3650,Good
 7450,Bad
 1184,Bad
-2166,Good
-2953,Very good
+2166,Very good
+2953,Excellent
 9326,Very good
 3011,Good
-3599,Excellent
+3599,Very good
 7696,Very good
 5308,Good
-862,Very good
+862,Good
 538,Excellent
 2756,Very good
 4239,Very good
-6577,Very good
+6577,Excellent
 8797,Good
 9421,Very bad
 2806,Very good
@@ -1565,15 +1565,15 @@ id,review
 3392,Very bad
 9165,Excellent
 7430,Very good
-539,Excellent
+539,Very good
 5708,Good
 3342,Very good
 8337,Bad
-8219,Very good
-6172,Very good
-6102,Excellent
+8219,Good
+6172,Excellent
+6102,Very good
 1632,Excellent
-9054,Very good
+9054,Excellent
 6839,Bad
 717,Excellent
 6141,Excellent
@@ -1587,7 +1587,7 @@ id,review
 6033,Good
 5558,Very bad
 4810,Excellent
-9239,Bad
+9239,Very bad
 3426,Very bad
 9428,Good
 6723,Excellent
@@ -1603,48 +1603,48 @@ id,review
 8836,Very good
 1617,Very good
 1267,Excellent
-5011,Very bad
+5011,Bad
 8736,Very good
 9802,Good
 8780,Good
-4540,Excellent
-5268,Excellent
-5404,Good
+4540,Very good
+5268,Very good
+5404,Very good
 4447,Good
 2931,Excellent
 8983,Good
 6192,Very good
 255,Very good
-3472,Very good
+3472,Good
 6575,Very good
-747,Very good
+747,Excellent
 7205,Very good
 3446,Good
-2813,Very good
+2813,Good
 1263,Very good
 6261,Very bad
 6712,Bad
-1229,Very good
+1229,Excellent
 380,Excellent
 1639,Very good
-9929,Good
+9929,Bad
 170,Bad
 1646,Very good
-1480,Good
-7116,Very good
+1480,Very good
+7116,Excellent
 7678,Very good
-81,Excellent
+81,Very good
 330,Good
 7381,Bad
 1587,Very good
-6974,Very good
+6974,Excellent
 8257,Excellent
 583,Very good
-2279,Excellent
+2279,Very good
 4547,Good
 2553,Good
 8146,Excellent
-7631,Very bad
+7631,Bad
 6118,Very good
 8410,Very good
 8534,Excellent
@@ -1652,10 +1652,10 @@ id,review
 7131,Excellent
 8819,Excellent
 3544,Very good
-7761,Very good
+7761,Excellent
 9894,Very good
-3410,Good
-9717,Very good
+3410,Very good
+9717,Good
 9965,Very good
 9061,Very good
 7322,Excellent
@@ -1664,73 +1664,73 @@ id,review
 6173,Excellent
 5602,Good
 5828,Good
-7454,Good
+7454,Very good
 6243,Excellent
-6938,Good
+6938,Very bad
 2899,Excellent
 584,Good
-8499,Very good
+8499,Excellent
 6071,Very good
-7246,Very good
+7246,Excellent
 2099,Excellent
 2086,Very good
 2314,Very good
 9044,Very good
 740,Excellent
 9006,Very bad
-9200,Very good
+9200,Excellent
 3954,Very good
 7085,Very bad
 9322,Very good
-36,Excellent
-1851,Excellent
+36,Very good
+1851,Good
 5570,Very good
-2055,Excellent
+2055,Very good
 1652,Very good
 6327,Good
-9164,Excellent
+9164,Very good
 1701,Excellent
 8155,Excellent
 2857,Excellent
 2371,Good
 2128,Very good
-8671,Very good
+8671,Excellent
 5679,Very good
 2464,Very good
-8612,Excellent
+8612,Good
 7289,Good
-5391,Good
-4541,Very good
+5391,Bad
+4541,Excellent
 2731,Bad
 276,Excellent
 8397,Bad
 173,Very good
 4261,Very good
 6780,Excellent
-6303,Excellent
+6303,Very good
 1293,Good
-97,Very good
+97,Excellent
 5315,Excellent
-6733,Excellent
-5276,Very good
+6733,Very bad
+5276,Good
 6330,Good
 429,Very bad
 8139,Excellent
 9355,Bad
 7931,Very good
-2134,Good
-1063,Very bad
+2134,Bad
+1063,Bad
 2525,Excellent
 8665,Excellent
 9028,Very good
-972,Good
+972,Very good
 4770,Good
 7882,Excellent
 1686,Good
 9396,Very bad
 1689,Very good
 805,Very bad
-9864,Very good
+9864,Excellent
 2723,Good
 1412,Very good
 1387,Very good
@@ -1741,33 +1741,33 @@ id,review
 4696,Excellent
 3965,Very good
 2882,Excellent
-4760,Very good
-5616,Very good
-2140,Very good
+4760,Excellent
+5616,Excellent
+2140,Good
 2300,Excellent
-6317,Very good
+6317,Excellent
 296,Excellent
 6534,Very good
 9845,Very good
-4412,Excellent
+4412,Bad
 4192,Good
 7376,Very good
 4246,Good
 2528,Very good
-2490,Very good
+2490,Excellent
 2862,Good
 1324,Very good
 328,Bad
 3358,Good
 9386,Very good
 9155,Very good
-7441,Very good
+7441,Good
 576,Excellent
 9399,Very good
 4625,Good
 7102,Excellent
 5927,Excellent
-8457,Good
+8457,Bad
 7571,Very good
 2800,Excellent
 261,Excellent
@@ -1777,14 +1777,14 @@ id,review
 1461,Good
 2907,Very good
 9467,Good
-6481,Very good
+6481,Excellent
 8954,Excellent
 5871,Good
-6889,Very good
+6889,Excellent
 761,Excellent
 215,Excellent
-506,Excellent
-3445,Excellent
+506,Very good
+3445,Very bad
 5190,Excellent
 4841,Excellent
 9050,Excellent
@@ -1793,67 +1793,67 @@ id,review
 7245,Excellent
 5472,Excellent
 5775,Very good
-9384,Good
+9384,Very good
 8602,Very good
 637,Good
 6931,Very good
-1169,Excellent
+1169,Good
 6749,Very good
-2945,Very good
+2945,Excellent
 5205,Very good
-1296,Very good
+1296,Good
 1140,Excellent
-9993,Very good
+9993,Good
 6666,Good
-9557,Good
+9557,Bad
 7178,Very good
 5802,Good
 3829,Good
-519,Very good
+519,Good
 8588,Very good
-3356,Very good
+3356,Excellent
 7809,Very good
 5271,Very good
-1067,Good
-4355,Good
+1067,Very good
+4355,Very good
 2018,Very good
 1258,Very good
 2689,Good
 7515,Very good
-5436,Good
-9511,Very good
-2656,Good
+5436,Bad
+9511,Excellent
+2656,Bad
 3894,Excellent
 82,Excellent
 3042,Excellent
 6444,Very good
 239,Very bad
 6125,Excellent
-751,Very good
+751,Excellent
 5873,Very good
 8739,Very good
-925,Very good
+925,Good
 7240,Excellent
 7428,Bad
 9055,Very good
-4980,Very good
+4980,Very bad
 4083,Very good
 3049,Very good
 7999,Excellent
 7708,Excellent
 8746,Excellent
 8682,Excellent
-6773,Good
+6773,Bad
 2073,Very good
 8039,Good
 3793,Excellent
-7827,Very good
-5046,Very good
-3441,Very good
+7827,Excellent
+5046,Excellent
+3441,Good
 9083,Excellent
 3606,Good
 2694,Excellent
-2317,Good
+2317,Bad
 8772,Excellent
 5170,Very bad
 4963,Excellent
@@ -1875,7 +1875,7 @@ id,review
 8722,Excellent
 2357,Bad
 2729,Very good
-5764,Very good
+5764,Excellent
 7512,Very good
 9306,Very good
 2292,Very good
@@ -1886,55 +1886,55 @@ id,review
 6622,Very good
 5914,Excellent
 6525,Good
-5351,Very good
-9129,Very good
+5351,Excellent
+9129,Good
 7666,Bad
 3376,Excellent
 9216,Excellent
 4951,Excellent
-8239,Very bad
+8239,Bad
 1155,Very good
 5714,Very bad
 6405,Very good
-7234,Very good
-5520,Excellent
+7234,Good
+5520,Very good
 3151,Good
-1566,Very good
-8178,Very good
+1566,Good
+8178,Excellent
 3685,Good
-7041,Good
+7041,Bad
 7075,Very good
 1019,Very good
 2605,Very good
 9241,Excellent
 6085,Good
-8378,Excellent
-5414,Good
+8378,Very good
+5414,Bad
 1726,Good
 7567,Very good
-8334,Good
+8334,Very bad
 6763,Very good
-2925,Good
+2925,Very good
 2154,Very bad
 324,Very good
 6289,Good
 4836,Bad
 1544,Bad
-6061,Very good
+6061,Excellent
 3725,Very good
 5473,Excellent
 244,Excellent
 2143,Excellent
 3958,Very good
-1846,Excellent
-2919,Good
+1846,Very good
+2919,Excellent
 6795,Excellent
 9600,Very good
 5618,Excellent
-2036,Good
+2036,Bad
 9207,Excellent
 1665,Very good
-2796,Very good
+2796,Excellent
 220,Excellent
 6805,Excellent
 2835,Excellent
@@ -1945,22 +1945,22 @@ id,review
 8533,Very good
 3612,Very good
 2066,Excellent
-8784,Very good
+8784,Excellent
 7850,Bad
-3873,Good
+3873,Very good
 1666,Very bad
 9678,Excellent
-1003,Excellent
+1003,Very good
 4276,Good
 6960,Very good
 4085,Good
-9761,Good
-7858,Good
+9761,Bad
+7858,Very good
 4959,Excellent
 7695,Good
-237,Very bad
+237,Bad
 2020,Very good
-8835,Good
+8835,Very good
 7637,Excellent
 7183,Very bad
 7721,Very good
@@ -1969,23 +1969,23 @@ id,review
 2120,Very bad
 6620,Very good
 4588,Excellent
-4088,Very good
+4088,Excellent
 3447,Very bad
 5412,Good
-8085,Good
+8085,Very good
 1071,Excellent
 559,Very bad
 2159,Excellent
 890,Very good
 1093,Bad
-5049,Good
-3584,Very good
+5049,Very good
+3584,Excellent
 4282,Very good
 7468,Very good
 8030,Excellent
 5896,Very bad
-6404,Bad
-8547,Very good
+6404,Very bad
+8547,Good
 7496,Good
 2874,Excellent
 5150,Very good
@@ -1993,30 +1993,30 @@ id,review
 7857,Good
 5368,Excellent
 7841,Very bad
-4232,Very good
-414,Excellent
+4232,Good
+414,Very bad
 1362,Very good
 2079,Good
 6087,Excellent
 5532,Bad
 7375,Excellent
-8300,Excellent
+8300,Very good
 6972,Excellent
-2827,Good
+2827,Very good
 448,Excellent
 7732,Very good
 2389,Very bad
 7144,Very good
-6003,Good
-1534,Very good
-7673,Very bad
+6003,Bad
+1534,Excellent
+7673,Bad
 2900,Excellent
 8769,Very good
 3842,Very good
-8630,Very good
-1357,Very good
+8630,Good
+1357,Good
 7547,Excellent
-8753,Excellent
+8753,Very good
 6457,Good
 342,Very bad
 4468,Very good
@@ -2029,34 +2029,34 @@ id,review
 9909,Very good
 8894,Good
 2687,Excellent
-8144,Excellent
+8144,Bad
 5542,Excellent
 1669,Very good
-8579,Very good
+8579,Excellent
 569,Excellent
 8608,Excellent
 3579,Excellent
 8811,Good
 5692,Excellent
-1946,Excellent
+1946,Very good
 83,Very good
 8585,Excellent
 2708,Excellent
 1406,Good
-553,Very good
-6450,Excellent
+553,Excellent
+6450,Bad
 2232,Very good
 2202,Excellent
 8374,Very good
 3818,Excellent
 6627,Excellent
 6562,Very good
-743,Very good
+743,Excellent
 7051,Excellent
 9317,Very good
 9959,Very good
 9184,Bad
-9760,Excellent
+9760,Good
 3018,Good
 8482,Excellent
 1634,Very good
@@ -2073,23 +2073,23 @@ id,review
 2617,Bad
 3594,Excellent
 611,Good
-390,Excellent
-308,Excellent
-3264,Very good
+390,Very bad
+308,Very bad
+3264,Good
 5047,Very good
 5243,Very bad
-4463,Bad
-2816,Good
+4463,Very bad
+2816,Very good
 1466,Excellent
-4746,Excellent
-1060,Very good
+4746,Good
+1060,Excellent
 5796,Excellent
 4155,Very bad
 1504,Excellent
 7098,Very good
 2186,Very good
 7424,Excellent
-4478,Excellent
+4478,Very good
 8088,Excellent
 3029,Excellent
 204,Good
@@ -2104,10 +2104,10 @@ id,review
 7324,Excellent
 8606,Excellent
 7001,Bad
-300,Very good
+300,Good
 3721,Good
 8691,Very good
-6017,Bad
+6017,Very bad
 8227,Good
 4405,Very good
 7125,Excellent
@@ -2115,7 +2115,7 @@ id,review
 7922,Excellent
 5522,Good
 161,Good
-6501,Very good
+6501,Excellent
 3552,Very bad
 5617,Excellent
 7226,Excellent
@@ -2124,10 +2124,10 @@ id,review
 2799,Very good
 4495,Very good
 5869,Very good
-1283,Very good
+1283,Good
 8790,Excellent
 9662,Very good
-9211,Good
+9211,Very good
 5832,Good
 2572,Excellent
 7257,Very good
@@ -2138,23 +2138,23 @@ id,review
 1300,Excellent
 9019,Excellent
 7305,Bad
-1998,Excellent
+1998,Very good
 7194,Very good
 9078,Very good
 9671,Very good
 5008,Very good
-6697,Good
+6697,Bad
 8627,Very good
 7600,Very good
-1339,Good
-9865,Good
+1339,Very bad
+9865,Very good
 8557,Very good
 8042,Good
-562,Very good
+562,Excellent
 2885,Very good
 6054,Excellent
-7572,Excellent
-4641,Good
+7572,Very good
+4641,Bad
 3922,Excellent
 7597,Excellent
 8868,Excellent
@@ -2162,22 +2162,22 @@ id,review
 4940,Excellent
 4096,Very bad
 1675,Very good
-1725,Excellent
+1725,Very good
 8035,Very good
 9950,Very good
-4482,Very good
+4482,Excellent
 8825,Very good
-4762,Very good
-4824,Very good
+4762,Good
+4824,Excellent
 1620,Very good
 1411,Very good
 1196,Excellent
 5454,Excellent
 640,Very good
-392,Very good
+392,Good
 8495,Good
 8029,Good
-9707,Good
+9707,Very good
 734,Very good
 6612,Good
 4464,Good
@@ -2189,14 +2189,14 @@ id,review
 4704,Good
 9101,Excellent
 815,Very good
-4060,Very good
+4060,Bad
 9172,Excellent
-376,Very good
+376,Excellent
 8235,Bad
 644,Good
 2947,Very bad
 67,Excellent
-1539,Good
+1539,Bad
 6097,Excellent
 9949,Excellent
 5077,Good
@@ -2204,18 +2204,18 @@ id,review
 6701,Excellent
 7168,Excellent
 2722,Bad
-5109,Good
+5109,Bad
 6537,Very good
 6079,Very good
 4051,Very good
-2027,Very good
+2027,Good
 9295,Excellent
 4250,Excellent
 9514,Very good
 680,Excellent
 5453,Bad
 8245,Good
-6636,Very good
+6636,Good
 6737,Very good
 760,Good
 6919,Very good
@@ -2224,31 +2224,31 @@ id,review
 1427,Very good
 95,Excellent
 5741,Good
-3573,Good
+3573,Bad
 7988,Excellent
 982,Excellent
 5672,Excellent
 9964,Good
 8803,Excellent
-3395,Very good
+3395,Good
 3822,Excellent
 3780,Excellent
 2429,Bad
 2354,Good
 9444,Very good
 2587,Excellent
-3249,Very bad
+3249,Good
 6349,Very good
 4059,Bad
 2631,Good
-8346,Good
-1178,Very good
+8346,Bad
+1178,Excellent
 3333,Very good
-7870,Good
+7870,Very good
 5523,Very bad
 2098,Good
-9208,Excellent
-192,Very good
+9208,Very good
+192,Good
 9084,Excellent
 669,Good
 2093,Very good
@@ -2258,151 +2258,151 @@ id,review
 4284,Very good
 7646,Excellent
 6452,Excellent
-8277,Good
-1735,Bad
-8695,Very good
+8277,Bad
+1735,Very bad
+8695,Excellent
 2436,Good
-9292,Good
+9292,Very good
 2374,Excellent
-8742,Very good
+8742,Good
 6646,Good
-2244,Good
+2244,Very good
 9430,Very good
 5040,Bad
 701,Very good
-2564,Very good
-4792,Good
+2564,Good
+4792,Bad
 6971,Excellent
 2928,Good
 9195,Good
 4106,Excellent
-5574,Good
+5574,Bad
 679,Excellent
-9953,Very good
+9953,Good
 2744,Good
-9603,Good
+9603,Very good
 9698,Good
 1409,Good
 3388,Very good
 1999,Bad
-6847,Very bad
+6847,Bad
 6576,Very bad
 1269,Very good
 4008,Very good
-3190,Bad
+3190,Very bad
 6121,Very good
 5382,Very good
-7302,Very good
-6135,Very good
+7302,Good
+6135,Excellent
 1032,Excellent
-7785,Good
-2183,Very good
-832,Very good
+7785,Bad
+2183,Excellent
+832,Good
 5516,Good
 5440,Good
-1349,Bad
+1349,Good
 766,Good
 5706,Very good
 700,Bad
 4975,Very good
 4124,Excellent
-998,Excellent
-4530,Very good
+998,Very good
+4530,Excellent
 8794,Very good
 5718,Very bad
-3485,Very good
+3485,Excellent
 4663,Excellent
-164,Good
+164,Excellent
 5032,Very good
-6196,Bad
-153,Excellent
+6196,Very bad
+153,Very bad
 6385,Excellent
 803,Excellent
 5880,Excellent
-7410,Good
+7410,Bad
 2548,Bad
 1944,Excellent
 8478,Excellent
 6893,Very good
-874,Excellent
+874,Very bad
 8964,Good
-9057,Very good
+9057,Excellent
 9223,Good
 9360,Very bad
-8150,Good
+8150,Very good
 8189,Very good
 7435,Excellent
-1784,Very good
+1784,Good
 5065,Good
 3757,Excellent
-9210,Excellent
+9210,Very good
 8143,Very good
 5034,Good
 6718,Very good
 833,Excellent
 147,Good
 6879,Very good
-8770,Good
+8770,Very good
 303,Very good
 5726,Excellent
 3340,Very good
 8163,Very good
 1419,Very good
 9990,Good
-8574,Very good
+8574,Bad
 7550,Very good
 3464,Excellent
-2710,Very good
-1018,Very good
+2710,Good
+1018,Excellent
 7603,Good
-2961,Very good
+2961,Good
 5066,Good
 9464,Excellent
 2671,Excellent
-9016,Very good
+9016,Excellent
 4007,Good
-4866,Very good
-6234,Very good
+4866,Good
+6234,Good
 3366,Bad
 616,Excellent
 6067,Very good
 6013,Very good
-5020,Good
+5020,Bad
 2811,Excellent
 216,Very good
-46,Very good
+46,Excellent
 4763,Very good
 1559,Very good
 9434,Very good
 643,Very good
 825,Excellent
-1509,Very good
+1509,Excellent
 9156,Good
-4735,Good
+4735,Very good
 4181,Bad
 3187,Good
 6304,Very bad
-5725,Very good
+5725,Good
 419,Very good
-1801,Very good
+1801,Excellent
 5746,Very good
-9900,Very good
-5824,Good
+9900,Good
+5824,Bad
 4379,Very good
-1550,Very good
+1550,Excellent
 8552,Very good
-4542,Very good
+4542,Excellent
 8203,Very bad
 6,Excellent
 3772,Excellent
 9378,Excellent
 3589,Excellent
 5366,Bad
-1488,Very good
+1488,Excellent
 6376,Excellent
 3733,Excellent
 9186,Excellent
-1260,Very good
+1260,Excellent
 6540,Very good
 9801,Excellent
 1506,Very good
@@ -2413,7 +2413,7 @@ id,review
 2014,Excellent
 4024,Very good
 4251,Good
-9738,Good
+9738,Very good
 4615,Excellent
 9897,Excellent
 7898,Very good
@@ -2424,45 +2424,45 @@ id,review
 2570,Very good
 6162,Excellent
 8661,Very good
-5147,Very good
+5147,Good
 3341,Excellent
 8711,Excellent
 6045,Good
 1389,Very good
 2124,Excellent
-9153,Very good
+9153,Excellent
 6401,Very good
 7806,Very good
 7602,Excellent
 7334,Excellent
-7122,Very good
-926,Excellent
+7122,Excellent
+926,Very good
 4102,Good
 541,Excellent
-8320,Good
+8320,Bad
 1379,Excellent
 2717,Very good
 8755,Bad
-9604,Very good
+9604,Excellent
 6136,Good
 6813,Very good
 4848,Excellent
 2071,Very good
 7517,Good
-9096,Very good
+9096,Excellent
 5521,Good
-8385,Good
+8385,Excellent
 6528,Very bad
 1375,Good
-7616,Very good
+7616,Excellent
 7199,Excellent
 8294,Good
 5540,Very good
-5466,Very good
-5015,Very good
+5466,Excellent
+5015,Excellent
 8807,Very good
 8600,Very good
-5754,Very good
+5754,Good
 5510,Excellent
 574,Excellent
 928,Very bad
@@ -2477,198 +2477,198 @@ id,review
 5716,Good
 9004,Bad
 2439,Excellent
-8694,Good
+8694,Very good
 6367,Excellent
-2599,Good
+2599,Bad
 4420,Bad
 3008,Good
 1438,Excellent
-5225,Good
-1113,Very good
+5225,Bad
+1113,Excellent
 7993,Very good
 366,Very good
 3160,Very good
-836,Very good
-3147,Good
+836,Excellent
+3147,Very good
 686,Very bad
 4353,Good
 1004,Excellent
 6706,Very good
-7331,Very good
+7331,Good
 8084,Very good
 8289,Very bad
-4546,Excellent
-2734,Good
+4546,Bad
+2734,Bad
 5304,Very good
 3098,Very good
 1146,Bad
-8136,Good
+8136,Bad
 8509,Very good
-3917,Excellent
+3917,Very good
 7316,Very good
 8896,Good
-3778,Very good
+3778,Excellent
 2524,Very good
 2619,Very bad
 9620,Very good
 3512,Bad
-4910,Very good
+4910,Good
 7130,Bad
 4578,Good
 3610,Very good
 6532,Excellent
-6778,Very good
+6778,Good
 7656,Very good
-7668,Very good
-481,Very good
+7668,Excellent
+481,Excellent
 6682,Excellent
 8968,Good
 2009,Good
-7201,Very good
+7201,Good
 5103,Very good
-24,Very good
+24,Excellent
 7759,Very good
-282,Good
-8900,Very good
+282,Very bad
+8900,Good
 3353,Excellent
 7754,Very good
-7474,Good
+7474,Very good
 8504,Very good
 4757,Excellent
 2341,Excellent
-6431,Very good
+6431,Bad
 4003,Excellent
 9366,Very good
-2426,Excellent
+2426,Very good
 3626,Very good
 7495,Good
 6029,Excellent
 7336,Excellent
-9334,Very good
+9334,Excellent
 6531,Excellent
-7251,Very good
+7251,Good
 8317,Good
-9863,Excellent
+9863,Very bad
 2860,Very good
-4854,Very good
+4854,Excellent
 8453,Bad
 8786,Good
 8292,Very good
 7917,Very bad
 1798,Very good
-9849,Bad
+9849,Good
 3561,Excellent
 6809,Excellent
 1769,Excellent
 2752,Excellent
-6726,Good
+6726,Bad
 7570,Very good
 3284,Excellent
 9664,Very good
-8583,Very good
+8583,Good
 5031,Very bad
 3605,Very good
-2640,Excellent
+2640,Very good
 1039,Very good
 346,Very good
 184,Excellent
-3051,Bad
+3051,Very bad
 985,Excellent
 4293,Very good
-7413,Good
+7413,Bad
 2286,Good
 885,Excellent
 7852,Very good
 9479,Excellent
 4471,Very good
-386,Very good
+386,Excellent
 7037,Very bad
-9375,Excellent
+9375,Very bad
 284,Excellent
 3122,Very good
 7053,Excellent
 2794,Very bad
 7047,Excellent
-979,Good
+979,Very bad
 8044,Very good
 1811,Excellent
 4778,Very good
-9694,Excellent
+9694,Very good
 9148,Excellent
 3960,Very bad
 7687,Very good
-6137,Good
+6137,Very good
 550,Very good
 9191,Very good
-2486,Very good
+2486,Excellent
 7699,Good
 4394,Very good
 9692,Bad
-1707,Very good
+1707,Good
 9706,Excellent
 917,Excellent
 949,Excellent
 9533,Very good
-5783,Very good
-8624,Very good
+5783,Good
+8624,Good
 5736,Excellent
 6693,Excellent
 110,Excellent
 6022,Very good
 3429,Very good
-21,Very good
+21,Excellent
 1175,Bad
 1026,Very good
 7544,Very good
-1347,Very good
+1347,Excellent
 7772,Very good
 3234,Very good
 7818,Good
-7713,Excellent
+7713,Very good
 2940,Excellent
-1354,Very good
+1354,Excellent
 5652,Excellent
 773,Very bad
 8442,Very bad
-471,Excellent
+471,Very good
 7963,Good
-2554,Bad
+2554,Very bad
 2483,Excellent
-2287,Very good
+2287,Good
 5118,Excellent
 2615,Good
-6524,Very good
-1705,Excellent
+6524,Excellent
+1705,Very bad
 7293,Very good
 629,Very good
-91,Excellent
+91,Very good
 2021,Very good
-7626,Very good
+7626,Excellent
 5867,Good
-2041,Very good
+2041,Good
 9314,Very good
 2375,Good
 7883,Excellent
 6715,Very good
-3259,Good
+3259,Very good
 2748,Very good
 9250,Very good
 424,Very good
-7218,Very good
+7218,Excellent
 3453,Very good
-3501,Excellent
+3501,Very good
 6533,Very bad
 3768,Very good
 6864,Very good
 5175,Very bad
-923,Very good
+923,Excellent
 7126,Very good
 1863,Good
-4115,Very good
-568,Good
+4115,Excellent
+568,Bad
 3482,Very bad
 1487,Very good
-2573,Good
+2573,Very good
 4299,Very good
 3304,Good
 3745,Very bad
@@ -2678,34 +2678,34 @@ id,review
 6616,Good
 317,Very bad
 1268,Excellent
-9566,Excellent
-268,Good
+9566,Very good
+268,Bad
 8732,Excellent
-4345,Bad
+4345,Good
 3596,Bad
 30,Very good
 1716,Excellent
 5859,Excellent
 2047,Excellent
-6273,Good
+6273,Very good
 3614,Excellent
 1197,Very good
 4638,Excellent
 487,Bad
-2706,Very good
+2706,Excellent
 2416,Very good
 5331,Good
-2881,Very good
-6934,Very good
+2881,Excellent
+6934,Excellent
 8857,Very good
 8090,Good
 3890,Excellent
 2838,Excellent
 7972,Good
-2049,Very good
-6937,Very good
-9641,Very bad
-1341,Very good
+2049,Excellent
+6937,Excellent
+9641,Good
+1341,Good
 4837,Good
 8435,Very good
 6255,Good
@@ -2718,10 +2718,10 @@ id,review
 3349,Excellent
 4650,Very good
 4472,Very good
-3783,Very good
+3783,Bad
 319,Good
-5427,Good
-108,Very good
+5427,Bad
+108,Excellent
 3530,Very bad
 418,Good
 8510,Good
@@ -2737,7 +2737,7 @@ id,review
 3875,Excellent
 2489,Bad
 9371,Very bad
-9245,Very bad
+9245,Bad
 5919,Excellent
 7731,Good
 5781,Very good
@@ -2747,14 +2747,14 @@ id,review
 7868,Good
 3281,Good
 7981,Good
-5548,Good
-4245,Very good
+5548,Bad
+4245,Excellent
 5202,Excellent
-9578,Very good
+9578,Excellent
 1862,Bad
-8659,Excellent
+8659,Very bad
 2282,Excellent
-6523,Very good
+6523,Excellent
 2512,Excellent
 7109,Bad
 4316,Excellent
@@ -2773,7 +2773,7 @@ id,review
 3172,Very good
 8224,Very good
 8677,Excellent
-2499,Good
+2499,Bad
 6771,Very good
 9229,Very good
 4280,Excellent
@@ -2782,21 +2782,21 @@ id,review
 664,Very good
 2743,Excellent
 5415,Excellent
-5765,Good
+5765,Very good
 8516,Bad
 1789,Very good
 2163,Very good
 6016,Excellent
-1403,Very good
+1403,Good
 3753,Excellent
 7719,Excellent
 3255,Very good
-6439,Good
-3295,Very good
+6439,Bad
+3295,Good
 8565,Very good
 6791,Very bad
 681,Very good
-6588,Good
+6588,Very good
 6415,Excellent
 4381,Excellent
 822,Excellent
@@ -2807,26 +2807,26 @@ id,review
 752,Excellent
 9737,Good
 7498,Very good
-5396,Very good
+5396,Good
 6454,Very good
 9798,Good
 1042,Excellent
 473,Very good
 1377,Very good
-8518,Very bad
+8518,Excellent
 7481,Very good
 9970,Excellent
-5790,Very good
+5790,Excellent
 3785,Excellent
 2301,Very good
 4329,Bad
-9699,Very good
-6994,Very good
-5238,Very good
-6876,Excellent
-2435,Excellent
-2878,Good
-410,Very good
+9699,Excellent
+6994,Good
+5238,Excellent
+6876,Very good
+2435,Good
+2878,Very good
+410,Excellent
 8018,Very good
 1737,Good
 5668,Excellent
@@ -2834,56 +2834,56 @@ id,review
 9280,Very good
 6038,Very good
 7342,Excellent
-3941,Very good
-7222,Very good
-1239,Very good
+3941,Excellent
+7222,Excellent
+1239,Excellent
 9852,Very good
 9735,Very good
 603,Very good
 599,Very good
-5223,Good
+5223,Very bad
 8652,Excellent
-5979,Very good
-9162,Very good
+5979,Good
+9162,Excellent
 999,Very good
-3409,Very good
+3409,Excellent
 9348,Very good
 7229,Good
 9302,Good
 2667,Very good
-5528,Very good
-9572,Very good
+5528,Bad
+9572,Good
 7477,Very good
 2914,Excellent
-5882,Very good
+5882,Very bad
 6932,Excellent
 3663,Very good
 1917,Very good
 7107,Good
 2421,Very good
 7992,Very good
-1284,Good
-7982,Very good
-6617,Very bad
-4113,Very good
+1284,Very good
+7982,Excellent
+6617,Bad
+4113,Excellent
 4137,Very good
 4601,Very good
 7828,Excellent
 7325,Excellent
-438,Very good
+438,Bad
 5941,Excellent
 9683,Very good
 7519,Excellent
-314,Very good
+314,Good
 4819,Very good
 1730,Very good
 496,Very good
 4859,Excellent
-8357,Very good
+8357,Bad
 8100,Very bad
 9679,Excellent
 7959,Excellent
-639,Good
+639,Bad
 4676,Excellent
 8876,Very good
 2456,Excellent
@@ -2891,19 +2891,19 @@ id,review
 1291,Very bad
 9260,Excellent
 6758,Very good
-4570,Excellent
-9491,Very bad
+4570,Bad
+9491,Bad
 9108,Excellent
 2320,Good
 9092,Good
-9160,Very good
+9160,Very bad
 5561,Excellent
 8965,Very bad
 1192,Very good
 6802,Excellent
 5151,Very good
 7822,Excellent
-122,Very good
+122,Excellent
 2505,Good
 6062,Excellent
 354,Very good
@@ -2911,9 +2911,9 @@ id,review
 8319,Very good
 9020,Excellent
 6275,Excellent
-4169,Good
-5341,Very good
-8321,Good
+4169,Very good
+5341,Good
+8321,Bad
 9226,Bad
 868,Excellent
 3797,Excellent
@@ -2922,39 +2922,39 @@ id,review
 1179,Excellent
 6770,Very good
 1256,Excellent
-6469,Very good
+6469,Excellent
 941,Very good
 5845,Excellent
-721,Bad
+721,Good
 1476,Good
 8282,Excellent
 1439,Very good
-1290,Very good
-7123,Very good
-9632,Very good
-5330,Good
+1290,Bad
+7123,Good
+9632,Excellent
+5330,Bad
 9758,Very good
-8781,Good
+8781,Bad
 5491,Very bad
 7170,Very bad
-8840,Good
-8799,Bad
+8840,Bad
+8799,Very bad
 914,Good
-7744,Very good
+7744,Good
 7712,Good
 8494,Very good
-8953,Good
-373,Good
-4821,Very good
+8953,Bad
+373,Very bad
+4821,Bad
 9457,Very good
 3730,Bad
 112,Excellent
-4877,Good
+4877,Bad
 4108,Very good
-8741,Bad
-8104,Very good
+8741,Very bad
+8104,Excellent
 1152,Good
-646,Very good
+646,Excellent
 5533,Good
 5495,Very bad
 9385,Very good
@@ -2964,37 +2964,37 @@ id,review
 4939,Very good
 9744,Excellent
 693,Very good
-4557,Very good
-8853,Good
+4557,Excellent
+8853,Bad
 565,Good
 957,Very good
-292,Bad
+292,Very bad
 1374,Very good
-9800,Good
-9059,Excellent
+9800,Very good
+9059,Very bad
 5457,Good
-181,Very good
+181,Good
 3656,Excellent
-8532,Good
-6106,Bad
-7356,Bad
+8532,Bad
+6106,Very bad
+7356,Good
 8824,Bad
 3835,Excellent
-1396,Very good
+1396,Excellent
 245,Excellent
-2369,Excellent
-3467,Very good
+2369,Very good
+3467,Good
 1013,Excellent
-4027,Very bad
+4027,Very good
 1734,Good
-8140,Very good
-6259,Very good
+8140,Excellent
+6259,Excellent
 7895,Excellent
-4636,Good
+4636,Very good
 9880,Excellent
 4833,Very good
 770,Good
-7607,Very good
+7607,Good
 5064,Excellent
 5052,Excellent
 7906,Excellent

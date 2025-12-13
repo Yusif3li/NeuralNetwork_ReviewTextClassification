@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import tensorflow as tf
+import pickle 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils import class_weight
@@ -44,21 +45,20 @@ TEST_SIZE = 0.2
 def check_and_prepare_data():
     # 1. Check Spell Checking
     if not os.path.exists(TRAIN_FIXED) or not os.path.exists(TEST_FIXED):
-        print("\nCleaned data not found. Running OneTimeSetup...")
+        print("\nCleaned data not found. Running OneTimeSetup")
         OneTimeSetup.run_cleanup()
     else:
         print("Cleaned data found.")
 
     # 2. Check Back Translation
     if not os.path.exists(BACK_TRANS_PATH):
-        print("\nBack-Translated data not found. Running BackTranslator...")
-        print("(This will take time, but only runs once!)")
+        print("\nBack-Translated data not found. Running BackTranslator")
         BackTranslator.run_back_translation()
     else:
         print("Back-Translated data found.")
 
 def load_glove_embeddings(vocab_size, word_index):
-    print(f"Loading GloVe Embeddings from {GLOVE_PATH}...")
+    print(f"Loading GloVe Embeddings from {GLOVE_PATH}")
     if not os.path.exists(GLOVE_PATH):
         print(f"WARNING: GloVe file not found at {GLOVE_PATH}!")
         return None
@@ -162,10 +162,10 @@ if __name__ == "__main__":
     print("="*50)
     
     # 1. Load Data
-    print("Loading Data...")
+    print("Loading Data")
     df_full = pd.read_csv(TRAIN_FIXED)
 
-    print("\nRunning Diagnostics on Final Training Set...")
+    print("\nRunning Diagnostics on Final Training Set")
     try:
         suggested_len = DataDiagnostics.analyze_data(df_full, text_col='clean_text', label_col='review')
         MAX_LEN = suggested_len
@@ -180,7 +180,7 @@ if __name__ == "__main__":
     df_back = pd.read_csv(BACK_TRANS_PATH)
     
     # 3. Split IDs first to ensure NO LEAKAGE
-    print("Splitting Train/Validation...")
+    print("Splitting Train/Validation")
     le = LabelEncoder()
     df_full['label_id'] = le.fit_transform(df_full['review'])
     classes = le.classes_
@@ -199,7 +199,7 @@ if __name__ == "__main__":
     # We need numeric Y for validation scoring
     y_val_numeric = df_full.loc[indices_val, 'label_id'].values 
 
-    # Merge Back-Translation (Anti-Leakage)
+    # Merge Back-Translation
     if not df_back.empty:
         train_ids = df_full.loc[indices_train, 'id'].values
         df_back_safe = df_back[df_back['id'].isin(train_ids)].copy()
@@ -213,19 +213,19 @@ if __name__ == "__main__":
     # 4. Augmentation
     if os.path.exists(AUG_FILE):
         print(f"Found Pre-Augmented Data: {AUG_FILE}")
-        print("Loading directly (Skipping slow augmentation)...")
+        print("Loading directly (Skipping slow augmentation)")
         df_train_aug = pd.read_csv(AUG_FILE)
         df_train_aug['clean_text'] = df_train_aug['clean_text'].fillna("").astype(str)
     else:
-        print("Generating Augmented Data...")
+        print("Generating Augmented Data")
         df_train_split = pd.DataFrame({'clean_text': X_train_raw, 'review': y_train_raw})
         df_train_aug = augment_dataset(df_train_split, strategy='nltk')
-        print(f"Saving Augmented Data to {AUG_FILE}...")
+        print(f"Saving Augmented Data to {AUG_FILE}")
         df_train_aug.to_csv(AUG_FILE, index=False)
 
     # 5. DIAGNOSTICS ON FINAL DATA
     # We run this on the augmented data to find the TRUE max length needed
-    print("\nRunning Diagnostics on Final Training Set...")
+    print("\nRunning Diagnostics on Final Training Set")
     try:
         suggested_len = DataDiagnostics.analyze_data(df_train_aug, text_col='clean_text', label_col='review')
         MAX_LEN = suggested_len
@@ -235,9 +235,18 @@ if __name__ == "__main__":
         pass
 
     # 6. Tokenization
-    print("Tokenizing...")
+    print("Tokenizing")
     tokenizer = Tokenizer(num_words=MAX_WORDS, oov_token="<OOV>")
     tokenizer.fit_on_texts(df_train_aug['clean_text'])
+    
+    # SAVE
+    print(">>> Saving Ensemble Tokenizer and Label Encoder")
+    with open('SavedModels/tokenizer_ensemble.pickle', 'wb') as handle:
+        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+    with open('SavedModels/label_encoder_ensemble.pickle', 'wb') as handle:
+        pickle.dump(le, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    # ------------------------------------
     
     embedding_matrix = load_glove_embeddings(len(tokenizer.word_index) + 1, tokenizer.word_index)
     
@@ -253,7 +262,7 @@ if __name__ == "__main__":
     class_weights = class_weight.compute_class_weight(class_weight='balanced', classes=np.unique(y_train_final), y=y_train_final)
     weights_dict = dict(enumerate(class_weights))
 
-    # --- EXPERIMENTS ---
+    # EXPERIMENTS 
     experiments = [
         { 
             "type": "CNN",
@@ -307,7 +316,7 @@ if __name__ == "__main__":
         )
         
         # Validation Predictions
-        print(f"\nEvaluating {exp['name']}...")
+        print(f"\nEvaluating {exp['name']}")
         val_probs = model.predict(X_val_pad)
         val_preds = np.argmax(val_probs, axis=1)
         acc = accuracy_score(y_val_numeric, val_preds)
@@ -330,7 +339,7 @@ if __name__ == "__main__":
         sub_preds = np.argmax(test_probs, axis=1)
         pd.DataFrame({'id': df_test['id'], 'review': le.inverse_transform(sub_preds)}).to_csv(exp['sub_file'], index=False)
 
-    # --- ENSEMBLING ---
+    # ENSEMBLING 
     print("\n" + "="*50)
     print("ENSEMBLING (CNN + LSTM)")
     print("="*50)

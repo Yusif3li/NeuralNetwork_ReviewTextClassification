@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import tensorflow as tf
+import pickle  
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils import class_weight
@@ -20,18 +21,18 @@ import DataDiagnostics
 import OneTimeSetup
 import BackTranslator
 
-# --- PATHS ---
+#  PATHS 
 TRAIN_FIXED = 'Dataset/train_fixed.csv'
 TEST_FIXED = 'Dataset/test_fixed.csv'
 BACK_TRANS_PATH = 'Dataset/train_back_translated.csv'
 GLOVE_PATH = 'Dataset/glove.6b/glove.6B.200d.txt'
 
-# --- SETUP ---
+#  SETUP
 os.makedirs('SavedModels', exist_ok=True)
 os.makedirs('ModelPredicts', exist_ok=True)
 os.makedirs('new_dataset', exist_ok=True) 
 
-# --- HYPERPARAMETERS ---
+#  HYPERPARAMETERS 
 MAX_WORDS = 22000       
 MAX_LEN = 300           
 EMBEDDING_DIM = 200     
@@ -40,26 +41,23 @@ EPOCHS = 40
 TEST_SIZE = 0.2         
 
 def check_and_prepare_data():
-    """
-    Ensures all data is ready before training starts.
-    """
     # Check Spell Checking
     if not os.path.exists(TRAIN_FIXED) or not os.path.exists(TEST_FIXED):
-        print("\n>>> Cleaned data not found. Running OneTimeSetup...")
+        print("\n>>> Cleaned data not found. Running OneTimeSetup")
         OneTimeSetup.run_cleanup()
     else:
         print(">>> Cleaned data found.")
 
     # Check Back Translation
     if not os.path.exists(BACK_TRANS_PATH):
-        print("\n>>> Back-Translated data not found. Running BackTranslator...")
+        print("\n>>> Back-Translated data not found. Running BackTranslator")
         print("    (This will take time, but only runs once!)")
         BackTranslator.run_back_translation()
     else:
         print(">>> Back-Translated data found.")
 
 def load_glove_embeddings(vocab_size, word_index):
-    print(f">>> Loading GloVe Embeddings from {GLOVE_PATH}...")
+    print(f">>> Loading GloVe Embeddings from {GLOVE_PATH}")
     if not os.path.exists(GLOVE_PATH):
         print(f"WARNING: GloVe file not found at {GLOVE_PATH}!")
         return None
@@ -138,7 +136,7 @@ if __name__ == "__main__":
     print(">>> PIPELINE STEP 3: TRAINING")
     print("="*50)
     
-    print(">>> Loading Data...")
+    print(">>> Loading Data")
     df_full = pd.read_csv(TRAIN_FIXED)
     df_full['clean_text'] = df_full['clean_text'].fillna("").astype(str)
     
@@ -146,14 +144,14 @@ if __name__ == "__main__":
     df_back = pd.read_csv(BACK_TRANS_PATH)
     
     # DATA DIAGNOSTICS 
-    print(">>> Running Data Diagnosis...")
+    print(">>> Running Data Diagnosis")
     try:
         suggested_len = DataDiagnostics.analyze_data(df_full)
         MAX_LEN = suggested_len
         print(f">>> Updated MAX_LEN to {MAX_LEN}")
     except: pass
 
-    print("\n>>> Splitting Train/Validation...")
+    print("\n>>> Splitting Train/Validation")
     le = LabelEncoder()
     df_full['label_id'] = le.fit_transform(df_full['review'])
     classes = le.classes_
@@ -198,18 +196,26 @@ if __name__ == "__main__":
         # AUGMENTATION CHECK
         if os.path.exists(exp['aug_file']):
             print(f">>> Found Pre-Augmented Data: {exp['aug_file']}")
-            print("    Loading directly (Skipping slow augmentation)...")
+            print("    Loading directly (Skipping slow augmentation)")
             df_train_aug = pd.read_csv(exp['aug_file'])
             df_train_aug['clean_text'] = df_train_aug['clean_text'].fillna("").astype(str)
         else:
-            print(f">>> Augmenting ({exp['strategy']})...")
+            print(f">>> Augmenting ({exp['strategy']})")
             df_train_aug = augment_dataset(df_train_split, strategy=exp['strategy'])
             df_train_aug.to_csv(exp['aug_file'], index=False)
         
         # TOKENIZATION
-        print(">>> Tokenizing...")
+        print(">>> Tokenizing")
         tokenizer = Tokenizer(num_words=MAX_WORDS, oov_token="<OOV>")
         tokenizer.fit_on_texts(df_train_aug['clean_text'])
+
+        # SAVE 
+        print(">>> Saving Tokenizer and Label Encoder")
+        with open('SavedModels/tokenizer_cnn.pickle', 'wb') as handle:
+            pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+        with open('SavedModels/label_encoder_cnn.pickle', 'wb') as handle:
+            pickle.dump(le, handle, protocol=pickle.HIGHEST_PROTOCOL)
         
         # LOAD GLOVE 
         embedding_matrix = load_glove_embeddings(len(tokenizer.word_index) + 1, tokenizer.word_index)
@@ -228,7 +234,7 @@ if __name__ == "__main__":
 
         # TRAINING
         K.clear_session()
-        print(f">>> Training Model: {exp['name']}...")
+        print(f">>> Training Model: {exp['name']}")
         model = build_cnn_model(len(tokenizer.word_index) + 1, len(classes), MAX_LEN, embedding_matrix)
         
         callbacks = [
@@ -268,8 +274,8 @@ if __name__ == "__main__":
         print(f"{'='*40}\n")
         
         # SUBMISSION
-        print(f"\n>>> Generating Submission...")
-        df_test = pd.read_csv(TEST_FIXED) # Load cleaned test data
+        print(f"\n>>> Generating Submission")
+        df_test = pd.read_csv(TEST_FIXED) 
         df_test['clean_text'] = df_test['clean_text'].fillna("").astype(str)
         
         X_test_seq = tokenizer.texts_to_sequences(df_test['clean_text'])

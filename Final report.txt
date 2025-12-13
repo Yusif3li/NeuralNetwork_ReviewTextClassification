@@ -94,12 +94,13 @@ Conclusion: Simply adding external embeddings is not a magic bullet.
 Next Step: Return to architectural improvements (Pooling strategies) before revisiting Embeddings.
 
 ################################################################################################################################################
-Trial 20: The Merger (Dual Pooling + Label Smoothing)
+Trial 15: The Merger (Dual Pooling + Label Smoothing)
 
 Architecture: Parallel Conv1D -> Dual Pooling (Concatenate Max + Avg) -> Dense.
 Parameters: SpatialDropout=0.2, L2=0.001, Pooling=Dual(Max+Avg), Smooth=0.1.
 
 Results:
+Training Accuracy: 59%
 Validation Accuracy: 51.79%
 
 Observations: This trial was a strong success, reaching 51.79% accuracy, nearly matching our best historical run.
@@ -110,14 +111,14 @@ Conclusion: Dual Pooling is a highly effective strategy for this dataset, provid
 Next Step: Combine the stability of Dual Pooling with a fixed version of the GloVe strategy to create a final, robust model.
 
 ################################################################################################################################################
-Trial 31: The Final Synthesis (Frozen GloVe + Dual Augmentation)
+Trial 20: The Final Synthesis (Frozen GloVe + Dual Augmentation)
 
 Architecture: Parallel Conv1D (Kernels 3, 4, 5) -> Batch Norm -> Global Average Pooling -> Dense.
 Parameters: Embeddings=GloVe (Frozen), Augmentation=NLTK + Back-Translation, Pooling=Avg.
 
 Results:
-Training Accuracy: ~59%
-Validation Accuracy: 54.57% (New Best Record)
+Training Accuracy: ~57%
+Validation Accuracy: ~54.1% (New Best Record)
 
 Observations: This model achieved the highest validation accuracy (52.71%) of all trials.
               Most importantly, it is the most stable model. The gap between Training (~59%) and Validation (54.57%) is minimal, indicating zero overfitting.
